@@ -109,14 +109,15 @@ img,svg{display:block;max-width:100%}
 .content-row p{color:var(--muted);font-size:var(--text-sm)}
 
 /* Phase strip (6-column) */
-.phases{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--divider);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-2)}
-.phase{padding:var(--space-5);border-right:1px solid var(--divider)}
-.phase:last-child{border-right:0}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--divider);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-2)}
+.phase{padding:var(--space-6);border-right:1px solid var(--divider);border-bottom:1px solid var(--divider)}
+.phase:nth-child(3n){border-right:0}
+.phase:nth-child(n+4){border-bottom:0}
 .phase .num{font-family:var(--font-display);color:var(--primary);font-size:var(--text-base)}
-.phase h3{font-size:var(--text-sm);font-weight:600;margin:var(--space-2) 0}
-.phase p{color:var(--muted);font-size:var(--text-xs)}
-.phase .lane{margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--divider)}
-.phase .lane b{display:block;font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--primary);margin-bottom:6px}
+.phase h3{font-size:var(--text-base);font-weight:600;margin:var(--space-2) 0}
+.phase>p{color:var(--muted);font-size:var(--text-sm)}
+.phase .plane{margin-top:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--divider);font-size:var(--text-xs);color:var(--muted)}
+.phase .plane b{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--primary);margin-bottom:5px}
 
 /* Pillars (3-up cards) */
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
@@ -182,7 +183,7 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 .footerline a:hover{text-decoration:underline}
 
 /* Responsive */
-@media(max-width:960px){.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic{grid-template-columns:1fr}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
+@media(max-width:960px){.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic{grid-template-columns:1fr}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:nth-child(n+4){border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
 @media(max-width:640px){.navlinks a{display:none}.brand-text small{display:none}.hero-actions{display:grid}.btn{width:100%}.flow .flowline{grid-template-columns:1fr}.flow .step{border-right:0!important}.phases{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media print{.topbar,.hero-actions,.theme{display:none}.section{break-inside:avoid}body{background:#fff}.source{min-height:0}}
@@ -322,12 +323,12 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <div><h2>Six phases. One current version of the truth.</h2></div>
   </div>
   <div class="phases">
-    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p><p class="lane"><b>Access</b>Every system, data lake and repository the program must read is listed with the access method it already uses.</p><p class="lane"><b>Record</b>Scoping sessions are recorded and filed; the value case cites them.</p></div>
-    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p><p class="lane"><b>Access</b>One approved access plan raised as a single package, not a trickle of individual tickets.</p><p class="lane"><b>Record</b>Recording consent, retention and repository structure agreed before the first workshop.</p></div>
-    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><p class="lane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p><p class="lane"><b>Record</b>Workshops recorded and transcripts kept open to participants; decisions extracted to versioned entries the same day.</p></div>
-    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p><p class="lane"><b>Access</b>Proven read paths feed build and test; the connection register records what was used and by whom.</p><p class="lane"><b>Record</b>Each artefact approved by a named reviewer against a specific version.</p></div>
-    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><p class="lane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p><p class="lane"><b>Record</b>Cutover and training gates signed off on the record, not by email.</p></div>
-    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><p class="lane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p><p class="lane"><b>Record</b>Hypercare decisions and lessons return as versioned entries the next program inherits.</p></div>
+    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p><p class="plane"><b>Access</b>Every system, data lake and repository the program must read is listed with the access method it already uses.</p><p class="plane"><b>Record</b>Scoping sessions are recorded and filed; the value case cites them.</p></div>
+    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p><p class="plane"><b>Access</b>One approved access plan raised as a single package, not a trickle of individual tickets.</p><p class="plane"><b>Record</b>Recording consent, retention and repository structure agreed before the first workshop.</p></div>
+    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><p class="plane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p><p class="plane"><b>Record</b>Workshops recorded and transcripts kept open to participants; decisions extracted to versioned entries the same day.</p></div>
+    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p><p class="plane"><b>Access</b>Proven read paths feed build and test; the connection register records what was used and by whom.</p><p class="plane"><b>Record</b>Each artefact approved by a named reviewer against a specific version.</p></div>
+    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><p class="plane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p><p class="plane"><b>Record</b>Cutover and training gates signed off on the record, not by email.</p></div>
+    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><p class="plane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p><p class="plane"><b>Record</b>Hypercare decisions and lessons return as versioned entries the next program inherits.</p></div>
   </div>
 </div></section>
 
