@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A practical, security-led way to keep AI-assisted SAP transformation work aligned, governed and owned by the client.">
+<meta property="og:title" content="AI Program Alignment for SAP Transformation">
+<meta property="og:description" content="One program direction. Many AI tools. Client-owned context.">
+<title>AI Program Alignment for SAP Transformation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* Art direction: executive safety briefing -> calm, authoritative, understandable.
+   Palette: warm paper neutrals with one security green accent.
+   Typography: Instrument Serif + DM Sans for editorial trust and operational clarity.
+   Density: spacious above the fold, compact through evidence. */
+:root,[data-theme="light"]{
+ --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2.25rem,1.2rem + 3.2vw,4.5rem);
+ --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--space-32:8rem;
+ --bg:#f3f0e9;--surface:#faf8f3;--surface-2:#fffdf8;--offset:#eae5da;--dynamic:#ddd7ca;--divider:#d3ccbf;--border:#c9c1b4;--text:#1c2925;--muted:#5d6863;--faint:#777f7b;--inverse:#fffdf8;--primary:#0d6756;--primary-hover:#084f42;--primary-active:#063b32;--highlight:#d7e8e2;--ciso:#21312c;--warm:#b8682b;
+ --font-display:'Instrument Serif','Georgia',serif;--font-body:'DM Sans','Helvetica Neue',sans-serif;--radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-full:9999px;--shadow-sm:0 1px 2px rgba(28,41,37,.06);--shadow-md:0 12px 32px rgba(28,41,37,.09);--transition:180ms cubic-bezier(.16,1,.3,1);--wide:1200px;--default:960px;--narrow:680px;
+}
+[data-theme="dark"]{--bg:#171a18;--surface:#1d211f;--surface-2:#222724;--offset:#2a302d;--dynamic:#343c38;--divider:#343b37;--border:#48514d;--text:#e7e8e4;--muted:#b2b8b4;--faint:#8e9792;--inverse:#15211d;--primary:#72c4ac;--primary-hover:#93d5c2;--primary-active:#b4e4d6;--highlight:#29463d;--ciso:#c8ddd5;--warm:#e3a16e;--shadow-sm:0 1px 2px rgba(0,0,0,.25);--shadow-md:0 12px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:none;text-size-adjust:none}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+a,button{font:inherit}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}
+button{cursor:pointer;color:inherit}
+p,li{max-width:72ch;text-wrap:pretty}
+h1,h2,h3{line-height:1.1;text-wrap:balance}
+h1,h2{font-family:var(--font-display);font-weight:400}
+img,svg{display:block;max-width:100%}
+.skip{position:absolute;left:-9999px;top:var(--space-2);z-index:99;background:var(--primary);color:var(--inverse);padding:var(--space-3)}
+.skip:focus{left:var(--space-2)}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+.wrap{width:min(calc(100% - 2rem),var(--wide));margin-inline:auto}
+
+/* Topbar */
+.topbar{position:sticky;top:0;z-index:30;background:color-mix(in oklab,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in oklab,var(--text) 12%,transparent)}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.brand{display:flex;align-items:center;gap:var(--space-3);font-weight:700;text-decoration:none;color:var(--text)}
+.brand-mark{width:34px;height:34px;flex:0 0 auto}
+.brand-mark svg{width:100%;height:100%;color:var(--text)}
+.brand-text small{display:block;color:var(--muted);font-size:var(--text-xs);font-weight:500;letter-spacing:.01em}
+.navlinks{display:flex;align-items:center;gap:var(--space-5)}
+.navlinks a{font-size:var(--text-sm);font-weight:600;text-decoration:none}
+.theme{width:44px;height:44px;display:grid;place-items:center;border:1px solid color-mix(in oklab,var(--text) 14%,transparent);border-radius:var(--radius-full);background:var(--surface)}
+
+/* Hero */
+.hero{padding-block:clamp(var(--space-16),8vw,var(--space-24));display:grid;align-items:center}
+.eyebrow{font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-4)}
+.hero h1{font-size:var(--text-2xl);max-width:16ch;margin-bottom:var(--space-6)}
+.lead{font-size:var(--text-lg);color:var(--muted);max-width:60ch;margin-bottom:var(--space-8)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+.btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-3) var(--space-5);border-radius:var(--radius-full);text-decoration:none;font-weight:600;font-size:var(--text-sm);border:1px solid transparent;transition:var(--transition)}
+.btn.primary{background:var(--primary);color:var(--inverse)}
+.btn.primary:hover{background:var(--primary-hover)}
+.btn.secondary{background:transparent;color:var(--text);border-color:var(--border)}
+.btn.secondary:hover{background:var(--surface)}
+.promise{margin-top:var(--space-16);display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);padding-top:var(--space-8);border-top:1px solid var(--divider)}
+.promise strong{font-family:var(--font-display);font-weight:400;font-size:var(--text-lg);line-height:1.2}
+.promise p{color:var(--muted);font-size:var(--text-sm);max-width:52ch}
+
+/* Sections */
+.section{padding-block:clamp(var(--space-16),6vw,var(--space-20))}
+.section-head{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);margin-bottom:var(--space-12);align-items:start}
+.kicker{font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary)}
+.section-head h2{font-size:var(--text-xl);margin-top:var(--space-2)}
+.section-intro{color:var(--muted);margin-top:var(--space-4);max-width:56ch}
+.section.tint{background:var(--offset)}
+.section.tint2{background:var(--surface)}
+
+/* Two-lane split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.lane{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:var(--space-8)}
+.lane.security{background:var(--ciso);color:#e6efeb;border-color:transparent}
+.lane.security .lane-label,.lane.security h3{color:#e6efeb}
+.lane.security .plain-list b{color:#fffdf8}
+.lane.security .plain-list span{color:#b6c5be}
+.lane-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:var(--space-3)}
+.lane h3{font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:var(--space-4);font-weight:400}
+.lane p{color:var(--muted);margin-bottom:var(--space-6)}
+.lane.security p{color:#b6c5be}
+.plain-list{list-style:none;display:grid;gap:var(--space-4)}
+.plain-list li{display:grid;grid-template-columns:auto 1fr;gap:var(--space-4);align-items:baseline}
+.plain-list .num{font-family:var(--font-display);color:var(--primary);font-weight:400;font-size:var(--text-base)}
+.plain-list b{display:block;font-weight:600;margin-bottom:var(--space-1)}
+.plain-list span{color:var(--muted);font-size:var(--text-sm)}
+
+/* Flowline (4 across) */
+.flow .flowline{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--divider);border-radius:var(--radius-lg);background:var(--surface-2)}
+.flow .step{padding:var(--space-6);border-right:1px solid var(--divider)}
+.flow .step:last-child{border-right:0}
+.flow .num{font-family:var(--font-display);font-size:var(--text-lg);color:var(--primary);margin-bottom:var(--space-3)}
+.flow .step h3{font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-2)}
+.flow .step p{color:var(--muted);font-size:var(--text-sm)}
+
+/* Playbook (quote + rows) */
+.playbook{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-10);align-items:start}
+.quote{font-family:var(--font-display);font-style:italic;font-size:var(--text-lg);color:var(--text);position:sticky;top:6rem;line-height:1.35}
+.quote::before{content:'“';display:block;font-size:var(--text-xl);color:var(--primary);line-height:1}
+.contents{display:grid;gap:var(--space-6)}
+.content-row{display:grid;grid-template-columns:auto 1fr;gap:var(--space-4);align-items:start;padding-bottom:var(--space-6);border-bottom:1px solid var(--divider)}
+.content-row:last-child{border-bottom:0;padding-bottom:0}
+.content-row svg{width:22px;height:22px;color:var(--primary);margin-top:.25rem}
+.content-row h3{font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-2)}
+.content-row p{color:var(--muted);font-size:var(--text-sm)}
+
+/* Phase strip (6-column) */
+.phases{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--divider);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-2)}
+.phase{padding:var(--space-5);border-right:1px solid var(--divider)}
+.phase:last-child{border-right:0}
+.phase .num{font-family:var(--font-display);color:var(--primary);font-size:var(--text-base)}
+.phase h3{font-size:var(--text-sm);font-weight:600;margin:var(--space-2) 0}
+.phase p{color:var(--muted);font-size:var(--text-xs)}
+
+/* Pillars (3-up cards) */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+.pillar{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:var(--space-6)}
+.pillar .kicker{color:var(--primary)}
+.pillar h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin:var(--space-2) 0 var(--space-3)}
+.pillar p{color:var(--muted);font-size:var(--text-sm)}
+
+/* Standards list (compact numbered detail) */
+.standards{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.standard{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-md);padding:var(--space-5)}
+.standard .num{font-family:var(--font-display);color:var(--primary);font-size:var(--text-base);display:block;margin-bottom:var(--space-2)}
+.standard h3{font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-2)}
+.standard p{color:var(--muted);font-size:var(--text-sm)}
+
+/* Semantic-layer schematic (SAP + sovereign AI) */
+.schematic{display:grid;grid-template-columns:1fr auto 1fr;gap:var(--space-6);align-items:stretch}
+.schematic .pane{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:var(--space-6)}
+.schematic .pane h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:var(--space-3)}
+.schematic .pane p{color:var(--muted);font-size:var(--text-sm);margin-bottom:var(--space-3)}
+.schematic .pane ul{list-style:none;display:grid;gap:var(--space-2)}
+.schematic .pane li{color:var(--muted);font-size:var(--text-sm);padding-left:var(--space-4);position:relative}
+.schematic .pane li::before{content:'';position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--primary)}
+.schematic .arrows{display:grid;place-items:center;color:var(--primary);font-family:var(--font-display);font-size:var(--text-xl)}
+
+/* Meeting standard */
+.meeting{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
+.meeting-card{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:var(--space-6)}
+.meeting-card h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:var(--space-4)}
+.meeting-card ol{padding-left:var(--space-5);color:var(--muted)}
+.meeting-card ol li{margin-bottom:var(--space-2);font-size:var(--text-sm)}
+
+/* Evidence room */
+.section.evidence{background:var(--offset)}
+.source-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
+.source{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-md);padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3);min-height:210px}
+.source-meta{display:flex;justify-content:space-between;font-size:var(--text-xs);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.source h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;line-height:1.15}
+.source p{color:var(--muted);font-size:var(--text-sm);flex:1}
+.source a{color:var(--primary);font-weight:600;font-size:var(--text-sm);text-decoration:none}
+.source a:hover{text-decoration:underline}
+.notice{margin-top:var(--space-6);background:var(--highlight);padding:var(--space-4) var(--space-5);border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--text)}
+
+/* Architecture disclosure */
+details{border-bottom:1px solid var(--divider);padding:var(--space-4) 0}
+details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::after{content:'+';color:var(--primary);font-size:var(--text-lg);font-family:var(--font-display)}
+details[open] summary::after{content:'−'}
+details p{color:var(--muted);font-size:var(--text-sm);margin-top:var(--space-3);max-width:72ch}
+
+/* CTA */
+.cta{background:var(--primary);color:var(--inverse);border-radius:var(--radius-lg);padding:var(--space-10);display:grid;grid-template-columns:2fr 1fr;gap:var(--space-6);align-items:center}
+.cta h2{color:var(--inverse);font-size:var(--text-xl)}
+.cta p{color:#c7ddd5;margin-top:var(--space-3);max-width:56ch}
+.cta .btn{background:var(--inverse);color:var(--primary)}
+.cta .btn:hover{background:#e7f0ec}
+
+/* Footer */
+footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:var(--muted);font-size:var(--text-sm)}
+.footerline{display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap}
+.footerline a{color:var(--primary);text-decoration:none;font-weight:500;margin-right:var(--space-4)}
+.footerline a:hover{text-decoration:underline}
+
+/* Responsive */
+@media(max-width:960px){.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic{grid-template-columns:1fr}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
+@media(max-width:640px){.navlinks a{display:none}.brand-text small{display:none}.hero-actions{display:grid}.btn{width:100%}.flow .flowline{grid-template-columns:1fr}.flow .step{border-right:0!important}.phases{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@media print{.topbar,.hero-actions,.theme{display:none}.section{break-inside:avoid}body{background:#fff}.source{min-height:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar"><nav class="nav wrap" aria-label="Primary">
+  <a class="brand" href="#top" aria-label="AI Program Alignment home">
+    <span class="brand-mark" aria-hidden="true">
+      <!-- EgD mark: triangle with inscribed circle, sitting on baseline arc -->
+      <svg viewBox="0 0 100 100" role="img" aria-label="EgD mark">
+        <path d="M50 8 L92 80 L8 80 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="miter"/>
+        <circle cx="50" cy="52" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M20 80 A30 30 0 0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".55"/>
+      </svg>
+    </span>
+    <span class="brand-text">AI Program Alignment<small>for SAP transformation · EgD</small></span>
+  </a>
+  <div class="navlinks">
+    <a href="#how">How it works</a>
+    <a href="#semantic">SAP &amp; sovereign AI</a>
+    <a href="#assistants">PMO assistants</a>
+    <a href="#disciplines">Disciplines</a>
+    <a href="#evidence">Security evidence</a>
+    <button class="theme" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true">◐</span></button>
+  </div>
+</nav></header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top"><div class="wrap">
+  <p class="eyebrow">A safer way to scale AI across a program</p>
+  <h1>Keep every AI working from the same playbook.</h1>
+  <p class="lead">Your people can use the tools that work for them—without sending the transformation in five different directions. Give every approved AI surface the same current decisions, definitions, constraints and source material.</p>
+  <div class="hero-actions">
+    <a class="btn primary" href="#how">See the operating model <span aria-hidden="true">↓</span></a>
+    <a class="btn secondary" href="#evidence">Review the CISO evidence</a>
+  </div>
+  <div class="promise">
+    <strong>One program direction.<br>Many AI tools.</strong>
+    <p>This is an additive alignment layer. It does not replace SAP, Microsoft 365, project controls or the systems of record already running the business.</p>
+  </div>
+</div></section>
+
+<!-- HOW: TWO LANES -->
+<section class="section" id="how"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Two views, one answer</p>
+    <div>
+      <h2>Useful to the program. Defensible to security.</h2>
+      <p class="section-intro">The same operating model answers two different questions: “Will this help our people work?” and “Can we let it touch our most valuable context?”</p>
+    </div>
+  </div>
+  <div class="split">
+    <article class="lane security">
+      <p class="lane-label">For the CISO and risk team</p>
+      <h3>Protect the reasoning, not only the files.</h3>
+      <p>A transformation's competitive value lives in the assembled context: decisions, exceptions, operating logic, designs, assumptions and the relationships between them.</p>
+      <ol class="plain-list">
+        <li><b class="num">01</b><div><b>Keep context client-owned</b><span>Private repositories, approved boundaries and role-based access.</span></div></li>
+        <li><b class="num">02</b><div><b>Control what AI can see</b><span>Need-to-know retrieval, data classification and tool-specific permissions.</span></div></li>
+        <li><b class="num">03</b><div><b>Make use reviewable</b><span>Source provenance, decision records, human approval and audit trails.</span></div></li>
+        <li><b class="num">04</b><div><b>Support reasonable measures</b><span>Awareness, access controls and documented handling support—not guarantee—trade-secret protection.</span></div></li>
+      </ol>
+    </article>
+    <article class="lane">
+      <p class="lane-label">For everyone in the program</p>
+      <h3>Give every team the current playbook.</h3>
+      <p>People keep their preferred AI tools. The program agrees on the context those tools use when producing program work.</p>
+      <ol class="plain-list">
+        <li><b class="num">01</b><div><b>Agree once</b><span>Definitions, decisions, architecture, templates and working rules become reusable program context.</span></div></li>
+        <li><b class="num">02</b><div><b>Generate with alignment</b><span>Briefs, designs, tests, reports and plans start from the same approved position.</span></div></li>
+        <li><b class="num">03</b><div><b>Review as a team</b><span>Humans approve material before it becomes a program commitment or operational action.</span></div></li>
+        <li><b class="num">04</b><div><b>Compound the learning</b><span>Accepted decisions and lessons return to the client repository for the next task and the next team.</span></div></li>
+      </ol>
+    </article>
+  </div>
+</div></section>
+
+<!-- FLOWLINE -->
+<section class="section flow" aria-labelledby="flow-title"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Simple operating model</p>
+    <div><h2 id="flow-title">The systems stay. The context becomes usable.</h2></div>
+  </div>
+  <div class="flowline">
+    <div class="step"><p class="num">01</p><h3>Systems of record</h3><p>SAP, documents, project controls and approved business sources remain authoritative.</p></div>
+    <div class="step"><p class="num">02</p><h3>Program playbook</h3><p>Current decisions, semantics, patterns, constraints and evidence are structured for reuse.</p></div>
+    <div class="step"><p class="num">03</p><h3>Approved AI surfaces</h3><p>Each tool receives only the context and permissions needed for the task.</p></div>
+    <div class="step"><p class="num">04</p><h3>Human-owned output</h3><p>People review, approve and return accepted work to the client record.</p></div>
+  </div>
+</div></section>
+
+<!-- SAP SEMANTIC LAYER + SOVEREIGN AI -->
+<section class="section" id="semantic"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Semantic layer as sovereign AI reference</p>
+    <div>
+      <h2>The SAP model is the enterprise's own language for AI.</h2>
+      <p class="section-intro">The same business definitions that reconcile the books can ground the AI. National-level guidance now treats data used to train and operate AI as security-critical—so the client's own semantics, not a vendor's generic corpus, become the trusted reference.</p>
+    </div>
+  </div>
+  <div class="schematic">
+    <div class="pane">
+      <p class="lane-label">Enterprise system of record</p>
+      <h3>SAP as the business's spine</h3>
+      <p>Master data, chart of accounts, process language, reporting semantics and closing logic already carry the meaning the business relies on.</p>
+      <ul>
+        <li>Approved definitions and structures</li>
+        <li>Auditable ledger and process history</li>
+        <li>Client-controlled access and classification</li>
+      </ul>
+    </div>
+    <div class="arrows" aria-hidden="true">⇌</div>
+    <div class="pane">
+      <p class="lane-label">Client-owned AI reference</p>
+      <h3>Sovereign context for AI surfaces</h3>
+      <p>AI tools consult the same enterprise language—served from a repository the client owns—rather than inventing definitions each time.</p>
+      <ul>
+        <li>Grounded answers, not generic ones</li>
+        <li>Retrieval limited to approved boundaries</li>
+        <li>Provenance and human approval on every output</li>
+      </ul>
+    </div>
+  </div>
+  <p class="notice"><b>Why this matters:</b> when the AI reads from the business's own semantic layer, it stops competing with SAP and starts explaining it—consistently, for every tool, in every team.</p>
+</div></section>
+
+<!-- SAP DELIVERY IN SIX PHASES -->
+<section class="section tint2"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">SAP delivery, aligned</p>
+    <div><h2>Six phases. One current version of the truth.</h2></div>
+  </div>
+  <div class="phases">
+    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p></div>
+    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p></div>
+    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p></div>
+    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p></div>
+    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p></div>
+    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p></div>
+  </div>
+</div></section>
+
+<!-- PMO ASSISTANTS (additive value) -->
+<section class="section" id="assistants"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Additive value in discovery and planning</p>
+    <div>
+      <h2>The program's own repository becomes a working assistant.</h2>
+      <p class="section-intro">Project artefacts and captured reasoning aren't only a record. They're the training ground for PMO assistants that read the client's existing estate against incoming scope—and surface savings while they are still recoverable.</p>
+    </div>
+  </div>
+  <div class="playbook">
+    <blockquote class="quote">Discovery and planning is the one window where a well-briefed assistant can still move numbers on the business case.</blockquote>
+    <div class="contents">
+      <div class="content-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+        <div><h3>Grounded in the client's own record</h3><p>Decisions, definitions, workshop outcomes and prior forecasts—read and cited the way a senior consultant would.</p></div>
+      </div>
+      <div class="content-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        <div><h3>Reads the existing estate against incoming scope</h3><p>Maps proposed scope against what the client already licenses and operates, and flags where new work overlaps capabilities already in place.</p></div>
+      </div>
+      <div class="content-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 16l4-4 3 3 5-6"/></svg>
+        <div><h3>Surfaces savings while they are still recoverable</h3><p>Renewals to consolidate, licensed but under-used surfaces to activate, duplicated tools to retire—each finding tied to the artefact behind it.</p></div>
+      </div>
+      <div class="content-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v6H4zM4 14h16v6H4z"/></svg>
+        <div><h3>Feeds forecasts and business cases directly</h3><p>Findings drop into the planning forecast alongside integration, refinement and adoption cost—defensible against renewal budgets from day one.</p></div>
+      </div>
+      <div class="content-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg>
+        <div><h3>Compounds across programs</h3><p>Every discovery adds to the repository. The next program starts from a stronger baseline, and the savings surfaced in planning become the recurring dividend of maintaining the record.</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- PROGRAM DISCIPLINES (3 pillars) -->
+<section class="section tint" id="disciplines"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Program disciplines</p>
+    <div>
+      <h2>Three disciplines keep the alignment layer honest.</h2>
+      <p class="section-intro">Refinement, inventory and adoption are the working practices that turn the repository into leverage—rather than another document store.</p>
+    </div>
+  </div>
+  <div class="pillars">
+    <article class="pillar">
+      <p class="kicker">Refinement</p>
+      <h3>Refined records, not raw dumps</h3>
+      <p>What lands in the repository is structured, dated, named and cited—so it earns its place as training material and reference.</p>
+    </article>
+    <article class="pillar">
+      <p class="kicker">Inventory</p>
+      <h3>Know what you already own</h3>
+      <p>Before buying a third-party tool, plan against the licences, platforms and capabilities already in place.</p>
+    </article>
+    <article class="pillar">
+      <p class="kicker">Adoption</p>
+      <h3>Approve, then adopt</h3>
+      <p>AI output becomes program commitment only after human review, and accepted lessons return to the repository.</p>
+    </article>
+  </div>
+</div></section>
+
+<!-- TRADE-SECRET STRUCTURED-DATA REFINEMENT -->
+<section class="section" id="refinement"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Trade-secret structured-data refinement</p>
+    <div>
+      <h2>Structure the record so it can be trusted—and defended.</h2>
+      <p class="section-intro">Refinement is the discipline that turns raw project material into structured, cited, review-ready records. It supports the reasonable-measures test for trade-secret protection and makes the repository fit for AI to consult.</p>
+    </div>
+  </div>
+  <div class="standards">
+    <article class="standard"><span class="num">01</span><h3>Refined records, not raw dumps</h3><p>Every submission is structured, dated, named and cited to the source—so the repository stays a working asset rather than a shelf.</p></article>
+    <article class="standard"><span class="num">02</span><h3>Classification on the way in</h3><p>Material is tagged for sensitivity, ownership and retention at capture—so retrieval and access controls have something to enforce.</p></article>
+    <article class="standard"><span class="num">03</span><h3>Provenance travels with the artefact</h3><p>Source, author, decision reference and approval status stay attached—so every downstream use can be traced back.</p></article>
+    <article class="standard"><span class="num">04</span><h3>Reasonable measures, documented</h3><p>Access limits, agreements, awareness and handling rules are recorded—so the client can show what was done, not only intended.</p></article>
+    <article class="standard"><span class="num">05</span><h3>Superseded, not deleted</h3><p>Prior versions are marked and kept alongside the current record—so history remains reviewable and corrections stay auditable.</p></article>
+    <article class="standard"><span class="num">06</span><h3>Fit for AI to consult</h3><p>Structured well enough for retrieval to return the right passage, and cited well enough for the answer to be defensible.</p></article>
+  </div>
+</div></section>
+
+<!-- INVENTORY BEFORE PURCHASE -->
+<section class="section tint2" id="inventory"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Inventory before purchase</p>
+    <div>
+      <h2>Plan against what is already licensed. Then decide.</h2>
+      <p class="section-intro">Strategy, planning and forecasting have to be well informed of the tools already available inside the client's existing infrastructure—before rushing to buy third-party alternatives.</p>
+    </div>
+  </div>
+  <div class="standards">
+    <article class="standard"><span class="num">01</span><h3>Start from the estate</h3><p>List what the client already owns: SAP modules, Microsoft 365, collaboration platforms, security stack, existing AI surfaces and current agent frameworks.</p></article>
+    <article class="standard"><span class="num">02</span><h3>Match scope to capability</h3><p>Test each incoming scope item against the estate before writing a purchase line—new spend only where the gap is real.</p></article>
+    <article class="standard"><span class="num">03</span><h3>Fair-test first</h3><p>When an in-house surface plausibly covers the need, give it a documented, time-boxed trial before comparing to third-party pricing.</p></article>
+    <article class="standard"><span class="num">04</span><h3>Include the true cost of "free"</h3><p>Integration, refinement, adoption and support cost sit alongside licence cost in the business case—both sides count.</p></article>
+    <article class="standard"><span class="num">05</span><h3>Decision on the record</h3><p>Buy, build or activate—the choice is recorded with the evidence behind it, so the next program starts from a shorter list, not a blank page.</p></article>
+  </div>
+</div></section>
+
+<!-- SEMANTIC PLAYBOOK (kept from the green source) -->
+<section class="section"><div class="wrap playbook">
+  <blockquote class="quote">The semantic model is not technical exhaust. It is how the enterprise explains the business to itself.</blockquote>
+  <div class="contents">
+    <div class="content-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h16M4 19h10"/></svg>
+      <div><h3>Business meaning</h3><p>Shared definitions, SAP structures, master-data meaning, process language and reporting semantics.</p></div>
+    </div>
+    <div class="content-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg>
+      <div><h3>Approved direction</h3><p>Decisions, rationale, constraints, design principles, exceptions and named owners.</p></div>
+    </div>
+    <div class="content-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg>
+      <div><h3>Reusable work</h3><p>Prompts, templates, test patterns, acceptance criteria and known-good examples.</p></div>
+    </div>
+    <div class="content-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div><h3>Traceable change</h3><p>Version history, provenance, review status, approvals and retention rules.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CONTRIBUTION & MEETING STANDARD -->
+<section class="section tint" id="meetings"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Contribution &amp; meeting standard</p>
+    <div>
+      <h2>Every meeting produces a repository entry. Every entry improves the next meeting.</h2>
+    </div>
+  </div>
+  <div class="meeting">
+    <div class="meeting-card">
+      <h3>Meeting standard</h3>
+      <ol>
+        <li>Named owner and named decision-makers before the meeting starts.</li>
+        <li>Agenda drawn from the repository—so context is shared, not reconstructed.</li>
+        <li>Decisions, exceptions and open items captured in-session, not after.</li>
+        <li>Actions have owners and due dates before people leave the call.</li>
+        <li>The record is filed to the repository within one working day.</li>
+      </ol>
+    </div>
+    <div class="meeting-card">
+      <h3>Contribution standard</h3>
+      <ol>
+        <li>Every contribution is attributable—named author, date, source.</li>
+        <li>New material is cited to its evidence, not to a memory of it.</li>
+        <li>Superseded material stays alongside the current version, marked.</li>
+        <li>Anything shared with an AI surface is drawn from the same record.</li>
+        <li>The repository is the record. Chat transcripts and drafts are not.</li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+
+<!-- EVIDENCE ROOM -->
+<section class="section evidence" id="evidence"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">CISO reading room</p>
+    <div>
+      <h2>The concern is established. The response can be practical.</h2>
+      <p class="section-intro">These are independent sources, not sales material. Each brief states what the source contributes to an enterprise AI conversation.</p>
+    </div>
+  </div>
+  <div class="source-grid">
+    <article class="source"><div class="source-meta"><span>Trade secrets</span><span>WIPO</span></div><h3>How to Protect Trade Secrets</h3><p>Protection depends on commercially valuable information remaining confidential and on reasonable measures such as access limits, confidentiality markings, agreements and employee awareness.</p><a href="https://www.wipo.int/en/web/trade-secrets/protection" target="_blank" rel="noopener noreferrer">Open the WIPO guidance ↗</a></article>
+    <article class="source"><div class="source-meta"><span>U.S. law</span><span>18 USC §1839</span></div><h3>Definition of a Trade Secret</h3><p>U.S. law covers business and technical compilations, methods, processes and programs when the owner takes reasonable measures and the information has economic value from secrecy.</p><a href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1839&num=0&edition=prelim" target="_blank" rel="noopener noreferrer">Open the statutory text ↗</a></article>
+    <article class="source"><div class="source-meta"><span>AI risk</span><span>NIST</span></div><h3>Generative AI Profile — AI 600-1</h3><p>NIST's cross-sector profile connects generative-AI governance to organizational risk and calls for monitoring sensitive-data exposure, testing and content provenance controls.</p><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" target="_blank" rel="noopener noreferrer">Open the NIST profile ↗</a></article>
+    <article class="source"><div class="source-meta"><span>AI data</span><span>CISA / NSA / FBI</span></div><h3>Securing Data Used to Train and Operate AI</h3><p>Joint guidance treats data security and integrity across the AI lifecycle as necessary to trustworthy outcomes, including sensitive, proprietary and mission-critical data.</p><a href="https://www.cisa.gov/resources-tools/resources/ai-data-security-best-practices-securing-data-used-train-operate-ai-systems" target="_blank" rel="noopener noreferrer">Open the joint guidance ↗</a></article>
+    <article class="source"><div class="source-meta"><span>Secure by design</span><span>NCSC / CISA</span></div><h3>Guidelines for Secure AI System Development</h3><p>International guidance frames security across design, development, deployment and operation, including systems built on external models and APIs.</p><a href="https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development" target="_blank" rel="noopener noreferrer">Open the security guidelines ↗</a></article>
+    <article class="source"><div class="source-meta"><span>Governance</span><span>ISO</span></div><h3>ISO/IEC 42001 AI Management Systems</h3><p>The standard describes an organization-wide management system for AI policy, responsibility, risk, data governance, monitoring and continual improvement.</p><a href="https://www.iso.org/standard/42001" target="_blank" rel="noopener noreferrer">Open the ISO overview ↗</a></article>
+    <article class="source"><div class="source-meta"><span>Context quality</span><span>TACL</span></div><h3>Lost in the Middle</h3><p>Peer-reviewed research found that long context alone is not reliable: model performance can drop when relevant information sits in the middle of lengthy input.</p><a href="https://aclanthology.org/2024.tacl-1.9/" target="_blank" rel="noopener noreferrer">Open the research paper ↗</a></article>
+    <article class="source"><div class="source-meta"><span>Grounding</span><span>NeurIPS</span></div><h3>Retrieval-Augmented Generation</h3><p>Foundational research shows how generation can use a retrievable external knowledge source rather than relying only on information embedded in a model.</p><a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer">Open the research paper ↗</a></article>
+  </div>
+  <p class="notice"><b>Scope note:</b> “Context reasoning” is used here as plain language for AI work grounded in selected organizational evidence, meaning and constraints—not as a legal category or a claim that repositories alone create trade-secret protection. Legal and security teams determine the controls required for each client.</p>
+</div></section>
+
+<!-- ARCHITECTURE DISCLOSURE -->
+<section class="section"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">In the background</p>
+    <div><h2>Enough architecture to satisfy diligence—not overwhelm the buyer.</h2></div>
+  </div>
+  <details><summary>Client custody and boundaries</summary><p>Program context resides in client-controlled repositories. Classification, identity, access, retention and approved-use rules define which people and AI surfaces can retrieve each class of material.</p></details>
+  <details><summary>Provenance and human control</summary><p>Generated work carries source references and review status. Named people approve changes that affect scope, design, configuration, testing, controls or operations.</p></details>
+  <details><summary>Additive integration</summary><p>The layer connects to approved systems and collaboration surfaces without displacing the ERP, document platform, project-management tools or security controls.</p></details>
+  <details><summary>Approved AI surfaces</summary><p>The program agrees which surfaces are approved for which classes of work. People keep their preferred tools within that boundary; the program keeps a single current playbook.</p></details>
+</div></section>
+
+<!-- CTA -->
+<section class="section"><div class="wrap">
+  <div class="cta">
+    <div>
+      <p class="kicker" style="color:var(--inverse);opacity:.75">Start with awareness</p>
+      <h2>Bring security and the program into the same conversation.</h2>
+      <p>Use the reading room as the pre-read. Then identify one contained SAP-program workflow where shared context, limited access and human approval can be tested.</p>
+    </div>
+    <a class="btn" href="mailto:dany@dmzopen.ai?subject=AI%20Program%20Alignment%20briefing">Request a working session</a>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap footerline">
+  <p>AI Program Alignment for SAP Transformation · Concept surface · 2026</p>
+  <p>
+    <a href="https://wa.me/15062921452" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/danytheriault" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </p>
+</div></footer>
+
+<script>
+(function(){const r=document.documentElement,t=document.querySelector('[data-theme-toggle]');let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';r.setAttribute('data-theme',d);t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode')})})();
+</script>
+</body></html>
