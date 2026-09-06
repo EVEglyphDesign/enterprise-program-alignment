@@ -40,3 +40,38 @@
 | 27 | 2026-09-05 | **Recorded sessions and version-controlled review added as first-class practices.** Recorded Teams sessions and transcripts are filed to the project repository as foundation material, with consent and retention agreed in advance, and refined into dated attributed entries rather than dumped as raw audio. Human control points run under version control: artefacts are versioned, a named reviewer approves a specific version, AI-assisted work enters as a proposed change and becomes commitment only on human acceptance, and the trail outlives the team. New `#control-points` section carries this; the meeting standard gains the recording line; each Activate phase card now carries a second "Record" lane alongside "Access". |
 | 28 | 2026-09-05 | **Transcripts are a live working reference, not a closeout archive.** Meeting transcripts stay available to participants for the life of the program so anyone can reassemble the history of a topic and the reasoning behind a design direction, subject to the client's consent and retention rules. Added as `#control-points` card 02, reflected in the section intro, the meeting standard and the Explore phase Record lane; card 07 spans full width. |
 | 29 | 2026-09-05 | **Phase grid rebuilt as 3 x 2.** Six narrow columns could not carry the Access and Record lanes without collapsing into ragged word-per-line text, and the lane class collided with the split-section `.lane` card styling, rendering the notes as boxes. Phase notes now use `.plane` with a hairline rule; the grid is three columns over two rows at desktop, two on tablet, one on phone. Rendered and checked at 1440px and 390px before publishing. |
+
+## 30 — 2026-09-06 — The surface is an additive accelerator, stated as such
+Lilian's surface is not a platform pitch. It runs on the client's existing tools and licences,
+works to the client's own usage protocols, and takes the client's baseline repositories and data
+lake as the starting record. New `#accelerator` section carries seven claims: client tools,
+client usage protocols, baseline repositories, zero egress, a DMZ-bound model doing the
+reasoning inside the client boundary, fixed structured output landing in the client record, and
+analytics that continue on the client's estate after the program closes. Hero promise block and
+page metadata restated to match.
+
+## 31 — 2026-09-06 — Compliance is the proof layer, not the hero
+Direction confirmed with the operator: the hero stays about program alignment; compliance sits
+directly beneath it as a dark panel of seven controls — custody, classification at capture,
+provenance, named human approval, version control and supersession, consent and retention,
+defensible on request. Each control states how it is evidenced and what it maps to (ISO/IEC
+42001, NIST AI 600-1, CISA/NSA/FBI AI data security, WIPO reasonable measures, 18 U.S.C. §1839).
+The earlier CISO/security pitch is not reinstated in the hero.
+
+## 32 — 2026-09-06 — Second level is in-page expanders, not separate pages
+The page was one plane: roughly fifty uniform cards, every claim at the same depth, all text
+visible at once. Six card sets (accelerator, compliance, mobilization, refinement, inventory,
+human control points) are now one-line claims that open on tap. Operator chose in-page expanders
+over second-level pages: one URL, nothing lost, far less scroll on a phone.
+
+## 33 — 2026-09-06 — Every claim carries its control
+Each drill-down row links to the control in the compliance spine that proves it, so the proof
+layer is reachable from any claim rather than being a section people scroll past.
+
+## 34 — 2026-09-06 — Density and navigation
+Section padding, section-head margin and hero padding tightened. Phase cards keep the three-across
+grid but their Access/Record notes collapse into one expander per phase. Primary nav trimmed from
+eight items to five (accelerator, compliance, SAP & AI, delivery, research). On phones the nav
+links were hidden entirely with no menu; the first two now render as compact pills so a phone
+reader can reach the accelerator and the controls from the header.
+
