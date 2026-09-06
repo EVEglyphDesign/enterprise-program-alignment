@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Keep people, partners and approved AI working from the same playbook, inside repositories the client owns and controls.">
+<meta name="description" content="An additive accelerator for enterprise programs: the client's own tools and usage protocols, baseline repositories read in place, a zero-egress DMZ-bound model with fixed output, and analytics that continue after the program closes.">
 <meta property="og:title" content="Enterprise Program Alignment for SAP Transformation">
-<meta property="og:description" content="One program direction. Many AI tools. Client-owned context.">
+<meta property="og:description" content="Client tools. Baseline repositories. Zero egress. A DMZ-bound model with fixed output.">
 <title>Enterprise Program Alignment for SAP Transformation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +49,7 @@ img,svg{display:block;max-width:100%}
 .theme{width:44px;height:44px;display:grid;place-items:center;border:1px solid color-mix(in oklab,var(--text) 14%,transparent);border-radius:var(--radius-full);background:var(--surface)}
 
 /* Hero */
-.hero{padding-block:clamp(var(--space-16),8vw,var(--space-24));display:grid;align-items:center}
+.hero{padding-block:clamp(var(--space-12),6vw,var(--space-20));display:grid;align-items:center}
 .eyebrow{font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-4)}
 .hero h1{font-size:var(--text-2xl);max-width:16ch;margin-bottom:var(--space-6)}
 .lead{font-size:var(--text-lg);color:var(--muted);max-width:60ch;margin-bottom:var(--space-8)}
@@ -59,13 +59,13 @@ img,svg{display:block;max-width:100%}
 .btn.primary:hover{background:var(--primary-hover)}
 .btn.secondary{background:transparent;color:var(--text);border-color:var(--border)}
 .btn.secondary:hover{background:var(--surface)}
-.promise{margin-top:var(--space-16);display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);padding-top:var(--space-8);border-top:1px solid var(--divider)}
+.promise{margin-top:var(--space-10);display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);padding-top:var(--space-8);border-top:1px solid var(--divider)}
 .promise strong{font-family:var(--font-display);font-weight:400;font-size:var(--text-lg);line-height:1.2}
 .promise p{color:var(--muted);font-size:var(--text-sm);max-width:52ch}
 
 /* Sections */
-.section{padding-block:clamp(var(--space-16),6vw,var(--space-20))}
-.section-head{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);margin-bottom:var(--space-12);align-items:start}
+.section{padding-block:clamp(var(--space-12),4.5vw,var(--space-16))}
+.section-head{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);margin-bottom:var(--space-8);align-items:start}
 .kicker{font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary)}
 .section-head h2{font-size:var(--text-xl);margin-top:var(--space-2)}
 .section-intro{color:var(--muted);margin-top:var(--space-4);max-width:56ch}
@@ -169,6 +169,44 @@ details summary::after{content:'+';color:var(--primary);font-size:var(--text-lg)
 details[open] summary::after{content:'−'}
 details p{color:var(--muted);font-size:var(--text-sm);margin-top:var(--space-3);max-width:72ch}
 
+
+/* Drill-down rows: one claim per line, detail opens on tap */
+.drill{border-top:1px solid var(--divider)}
+.drill details{border-bottom:1px solid var(--divider);padding:0}
+.drill summary{display:grid;grid-template-columns:1.75rem 1fr 1.25rem;gap:var(--space-3);align-items:baseline;padding:var(--space-4) 0;font-weight:600;font-size:var(--text-base);line-height:1.35}
+.drill summary .num{font-family:var(--font-display);font-weight:400;color:var(--primary);font-size:var(--text-sm)}
+.drill summary::after{justify-self:end;line-height:1}
+.drill .body{padding:0 0 var(--space-5) calc(1.75rem + var(--space-3))}
+.drill .body p{margin-top:0;color:var(--muted);font-size:var(--text-sm);max-width:68ch}
+.drill .body p + p{margin-top:var(--space-3)}
+.drill .maps{margin-top:var(--space-3);font-size:var(--text-xs);letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.drill .maps b{color:var(--primary);font-weight:600;letter-spacing:.06em}
+.drill .maps a{color:var(--primary);font-weight:600;text-decoration:none}
+.drill .maps a:hover{text-decoration:underline}
+.drill.two{border-top:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--space-10)}
+.drill.two details{border-top:1px solid var(--divider);border-bottom:0}
+
+/* Compliance spine */
+.spine{background:var(--ciso);color:#e6efeb;border-radius:var(--radius-lg);padding:clamp(var(--space-6),3vw,var(--space-10))}
+.spine .kicker{color:#8fd0bb}
+.spine h2{color:#fffdf8;font-size:var(--text-xl);margin:var(--space-2) 0 var(--space-3)}
+.spine .lead-sm{color:#b6c5be;font-size:var(--text-sm);max-width:66ch;margin-bottom:var(--space-6)}
+.spine .drill{border-top-color:rgba(230,239,235,.22)}
+.spine .drill details{border-bottom-color:rgba(230,239,235,.22)}
+.spine .drill summary{color:#fffdf8}
+.spine .drill summary .num,.spine .drill summary::after{color:#8fd0bb}
+.spine .drill .body p{color:#b6c5be}
+.spine .drill .maps{color:#8ea49b}
+.spine .drill .maps b{color:#8fd0bb}
+.spine .foot{margin-top:var(--space-6);padding-top:var(--space-5);border-top:1px solid rgba(230,239,235,.22);font-size:var(--text-sm);color:#b6c5be}
+.spine .foot a{color:#8fd0bb;font-weight:600}
+
+/* Phase notes collapse */
+.phase details{border-bottom:0;padding:var(--space-3) 0 0;margin-top:var(--space-3);border-top:1px solid var(--divider)}
+.phase details summary{font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--primary)}
+.phase details summary::after{font-size:var(--text-base)}
+.phase details .plane{margin-top:var(--space-3);padding-top:0;border-top:0}
+
 /* CTA */
 .cta{background:var(--primary);color:var(--inverse);border-radius:var(--radius-lg);padding:var(--space-10);display:grid;grid-template-columns:2fr 1fr;gap:var(--space-6);align-items:center}
 .cta h2{color:var(--inverse);font-size:var(--text-xl)}
@@ -183,7 +221,7 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 .footerline a:hover{text-decoration:underline}
 
 /* Responsive */
-@media(max-width:960px){.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic{grid-template-columns:1fr}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:nth-child(n+4){border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
+@media(max-width:960px){.drill.two{grid-template-columns:1fr}.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic{grid-template-columns:1fr}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:nth-child(n+4){border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
 @media(max-width:640px){.navlinks a{display:none}.brand-text small{display:none}.hero-actions{display:grid}.btn{width:100%}.flow .flowline{grid-template-columns:1fr}.flow .step{border-right:0!important}.phases{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media print{.topbar,.hero-actions,.theme{display:none}.section{break-inside:avoid}body{background:#fff}.source{min-height:0}}
@@ -205,6 +243,8 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <span class="brand-text">Enterprise Program Alignment<small>for SAP transformation · EgD</small></span>
   </a>
   <div class="navlinks">
+    <a href="#accelerator">The accelerator</a>
+    <a href="#compliance">Compliance</a>
     <a href="#how">How it works</a>
     <a href="#semantic">SAP &amp; sovereign AI</a>
     <a href="#assistants">PMO assistants</a>
@@ -221,14 +261,53 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 <section class="hero" id="top"><div class="wrap">
   <p class="eyebrow">Enterprise Program Alignment</p>
   <h1>Keep people, partners, and approved AI working from the same playbook.</h1>
-  <p class="lead">Organize the decisions, definitions, source material and delivery work that guide an enterprise transformation—inside repositories the client owns and controls.</p>
+  <p class="lead">Organize the decisions, definitions, source material and delivery work that guide an enterprise transformation—inside repositories the client owns and controls. Every claim below drills into the control that proves it.</p>
   <div class="hero-actions">
-    <a class="btn primary" href="#how">See the operating model <span aria-hidden="true">↓</span></a>
-    <a class="btn secondary" href="#delivery">Explore the delivery packages</a>
+    <a class="btn primary" href="#accelerator">See how the accelerator works <span aria-hidden="true">↓</span></a>
+    <a class="btn secondary" href="#compliance">See the controls underneath</a>
   </div>
   <div class="promise">
-    <strong>One program direction.<br>Many AI tools.</strong>
-    <p>This is an additive alignment layer. It does not replace SAP, Microsoft 365, project controls or the systems of record already running the business.</p>
+    <strong>Their tools.<br>Their boundary.<br>Zero egress.</strong>
+    <p>An additive accelerator, not a replacement. It runs on the client's existing tools and usage protocols, reads their baseline repositories in place, and reasons through a DMZ-bound model that returns fixed output into the client's own record. Nothing egresses.</p>
+  </div>
+</div></section>
+
+<!-- ADDITIVE ACCELERATOR: CLIENT TOOLS, ZERO EGRESS, DMZ-BOUND MODEL -->
+<section class="section" id="accelerator"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">What this actually is</p>
+    <div>
+      <h2>An additive accelerator that runs inside the client's own boundary.</h2>
+      <p class="section-intro">Not a platform to buy and not a place to send data. The client's existing tools, their usage protocols and their baseline repositories are the starting position. A DMZ-bound model does the reasoning on their side of the line, returns fixed output into their record, and keeps serving analytics after the program closes.</p>
+    </div>
+  </div>
+  <div class="drill">
+    <details><summary><span class="num">01</span><span>Runs on the tools the client already has</span></summary><div class="body"><p>The accelerator is additive. It uses the client's existing licences, identity, collaboration platform, repositories and data lake. No new platform is introduced, nothing is displaced, and no purchase is required before value starts.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">02</span><span>Their usage protocols govern, not ours</span></summary><div class="body"><p>Access is requested and granted the way the client already grants it. Their classification scheme, their approval owners, their network standards, their retention policy. Where a standard exists we work to it — we do not open a parallel route for the convenience of the program.</p><p class="maps"><b>Control</b> · <a href="#compliance">Classification at capture</a></p></div></details>
+    <details><summary><span class="num">03</span><span>Baseline repositories are the starting position</span></summary><div class="body"><p>What the client already holds — the data lake, the document repositories, SAP, prior program material — is surveyed and taken as the baseline record. The program builds forward from it rather than starting a fresh store beside it.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">04</span><span>Zero egress. Nothing leaves the boundary.</span></summary><div class="body"><p>Client data is not copied to a consultant tenant, not sent to a public model surface, and not used to train anything. Retrieval reaches into the client's record; nothing reaches back out. The zero-egress position is a design constraint, not a policy promise.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">05</span><span>A DMZ-bound model does the reasoning</span></summary><div class="body"><p>The language model runs inside a client-controlled DMZ, on the client's side of the boundary. It consults the baseline repositories and the program record in place. The reasoning happens where the data already lives, under the client's own network and identity controls.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">06</span><span>Fixed output, not open-ended generation</span></summary><div class="body"><p>The model returns defined, structured output — set formats, set fields, cited to source — that lands directly in the client record as a reviewable proposal. Output shape is fixed so it can be checked, approved and compared version to version.</p><p class="maps"><b>Control</b> · <a href="#compliance">Named human approval</a></p></div></details>
+    <details><summary><span class="num">07</span><span>Analytics continue after the program ends</span></summary><div class="body"><p>The DMZ-bound model, the baseline repositories and the accumulated program record stay with the client. Analytics keep running on the client's own estate once the consultants rotate off. The accelerator is not withdrawn at closeout — it is what the client keeps.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+  </div>
+</div></section>
+
+<!-- COMPLIANCE SPINE -->
+<section class="section" id="compliance"><div class="wrap">
+  <div class="spine">
+    <p class="kicker">The proof layer</p>
+    <h2>Every claim on this page has a control behind it.</h2>
+    <p class="lead-sm">Alignment is the offer. Compliance is what makes it survivable. Seven controls run underneath the whole operating model — each one an obligation the program can be held to, not a statement of intent. Open any control to see how it is evidenced and what it maps to.</p>
+    <div class="drill">
+      <details><summary><span class="num">01</span><span>Custody</span></summary><div class="body"><p>Program material is created and held in repositories the client owns and controls. No program knowledge accumulates in a consultant's tenant, a vendor platform or a chat transcript.</p><p>Evidenced by: repository ownership, role-based access, approved boundaries.</p><p class="maps"><b>Maps to</b> · ISO/IEC 42001 · CISA/NSA/FBI AI data security</p></div></details>
+      <details><summary><span class="num">02</span><span>Classification at capture</span></summary><div class="body"><p>Sensitivity, ownership and retention are tagged when material enters the record, not retrofitted at audit time. Access control and retrieval have something to enforce from day one.</p><p>Evidenced by: classification scheme, tagging at submission, enforced retrieval boundaries.</p><p class="maps"><b>Maps to</b> · ISO/IEC 42001 · WIPO reasonable measures</p></div></details>
+      <details><summary><span class="num">03</span><span>Provenance</span></summary><div class="body"><p>Source, author, decision reference and approval status travel with the artefact. Any downstream use — human or AI — can be traced back to what it was based on.</p><p>Evidenced by: cited entries, decision references, version history.</p><p class="maps"><b>Maps to</b> · NIST AI 600-1 · content provenance</p></div></details>
+      <details><summary><span class="num">04</span><span>Named human approval</span></summary><div class="body"><p>AI output enters as a proposal against a current version. It becomes program commitment only when a named person accepts it. The accountable human is on the record.</p><p>Evidenced by: reviewer name, version approved, comments and sign-off retained.</p><p class="maps"><b>Maps to</b> · ISO/IEC 42001 · NIST AI 600-1</p></div></details>
+      <details><summary><span class="num">05</span><span>Version control and supersession</span></summary><div class="body"><p>Nothing is deleted to make the record look tidy. Prior versions are marked superseded and kept alongside the current one, so corrections stay auditable.</p><p>Evidenced by: versioned artefacts, supersession marks, retained history.</p><p class="maps"><b>Maps to</b> · ISO/IEC 42001 · WIPO reasonable measures</p></div></details>
+      <details><summary><span class="num">06</span><span>Consent and retention</span></summary><div class="body"><p>Recordings and transcripts are filed under consent and retention rules agreed before the first workshop, and follow the client's own policy for the life of the program and after it.</p><p>Evidenced by: recording consent, retention schedule, access rules agreed in Prepare.</p><p class="maps"><b>Maps to</b> · Client policy · ISO/IEC 42001</p></div></details>
+      <details><summary><span class="num">07</span><span>Defensible on request</span></summary><div class="body"><p>The client can show what was done, not only what was intended: who saw what, under which rule, approved by whom, against which decision.</p><p>Evidenced by: access register, connection register, decision log, approval trail.</p><p class="maps"><b>Maps to</b> · 18 U.S.C. §1839 · WIPO reasonable measures</p></div></details>
+    </div>
+    <p class="foot">The controls above are the client's, held in the client's own record. The independent standards and statutes they map to are in <a href="#evidence">research and references</a>.</p>
   </div>
 </div></section>
 
@@ -323,12 +402,12 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <div><h2>Six phases. One current version of the truth.</h2></div>
   </div>
   <div class="phases">
-    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p><p class="plane"><b>Access</b>Every system, data lake and repository the program must read is listed with the access method it already uses.</p><p class="plane"><b>Record</b>Scoping sessions are recorded and filed; the value case cites them.</p></div>
-    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p><p class="plane"><b>Access</b>One approved access plan raised as a single package, not a trickle of individual tickets.</p><p class="plane"><b>Record</b>Recording consent, retention and repository structure agreed before the first workshop.</p></div>
-    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><p class="plane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p><p class="plane"><b>Record</b>Workshops recorded and transcripts kept open to participants; decisions extracted to versioned entries the same day.</p></div>
-    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p><p class="plane"><b>Access</b>Proven read paths feed build and test; the connection register records what was used and by whom.</p><p class="plane"><b>Record</b>Each artefact approved by a named reviewer against a specific version.</p></div>
-    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><p class="plane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p><p class="plane"><b>Record</b>Cutover and training gates signed off on the record, not by email.</p></div>
-    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><p class="plane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p><p class="plane"><b>Record</b>Hypercare decisions and lessons return as versioned entries the next program inherits.</p></div>
+    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Every system, data lake and repository the program must read is listed with the access method it already uses.</p><p class="plane"><b>Record</b>Scoping sessions are recorded and filed; the value case cites them.</p></details></div>
+    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>One approved access plan raised as a single package, not a trickle of individual tickets.</p><p class="plane"><b>Record</b>Recording consent, retention and repository structure agreed before the first workshop.</p></details></div>
+    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p><p class="plane"><b>Record</b>Workshops recorded and transcripts kept open to participants; decisions extracted to versioned entries the same day.</p></details></div>
+    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Proven read paths feed build and test; the connection register records what was used and by whom.</p><p class="plane"><b>Record</b>Each artefact approved by a named reviewer against a specific version.</p></details></div>
+    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p><p class="plane"><b>Record</b>Cutover and training gates signed off on the record, not by email.</p></details></div>
+    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p><p class="plane"><b>Record</b>Hypercare decisions and lessons return as versioned entries the next program inherits.</p></details></div>
   </div>
 </div></section>
 
@@ -341,13 +420,13 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
       <p class="section-intro">Most program delay is access delay. The team is assembled, and then it waits weeks for credentials, network paths and approvals nobody mapped in advance. We reverse the order: the data paths are opened, tested and validated before a single delivery consultant is mobilized.</p>
     </div>
   </div>
-  <div class="standards">
-    <article class="standard"><span class="num">01</span><h3>Map the access protocols on arrival</h3><p>We document every source the program will need—the data lake, the document repositories, SAP and the surrounding systems—and the access method each one already uses. Service accounts, network routes, approval owners, classification and retention rules. This is a survey of what exists, not a request to change it.</p></article>
-    <article class="standard"><span class="num">02</span><h3>Work to the client's current standards</h3><p>Access is requested the way the client already grants it. Where a standard exists, we use it. We do not introduce a parallel method, a new platform or an exception process for the convenience of the program.</p></article>
-    <article class="standard"><span class="num">03</span><h3>One coordinated request, not a trickle</h3><p>All access is raised together as a single approved plan with named owners and a stated purpose per source. Security, network and platform teams review one package of known scope instead of months of one-off exceptions arriving after the program has already started.</p></article>
-    <article class="standard"><span class="num">04</span><h3>Connect in one compressed window</h3><p>Once approved, the connections are established all in, inside a short window, rather than opened gradually as each workstream discovers it is blocked. This is where the schedule is recovered.</p></article>
-    <article class="standard"><span class="num">05</span><h3>Point to point, tested and validated</h3><p>Each connection is proven end to end against real data before it is relied on: read path, permissions, refresh behaviour, volume and failure handling. Results are recorded in a connection register the client owns and keeps.</p></article>
-    <article class="standard"><span class="num">06</span><h3>Then assemble the team</h3><p>Delivery consultants arrive to working access and current data. Discovery starts with evidence in front of it instead of a credentials queue, and the first weeks produce findings rather than tickets.</p></article>
+  <div class="drill">
+    <details><summary><span class="num">01</span><span>Map the access protocols on arrival</span></summary><div class="body"><p>We document every source the program will need—the data lake, the document repositories, SAP and the surrounding systems—and the access method each one already uses. Service accounts, network routes, approval owners, classification and retention rules. This is a survey of what exists, not a request to change it.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">02</span><span>Work to the client's current standards</span></summary><div class="body"><p>Access is requested the way the client already grants it. Where a standard exists, we use it. We do not introduce a parallel method, a new platform or an exception process for the convenience of the program.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">03</span><span>One coordinated request, not a trickle</span></summary><div class="body"><p>All access is raised together as a single approved plan with named owners and a stated purpose per source. Security, network and platform teams review one package of known scope instead of months of one-off exceptions arriving after the program has already started.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">04</span><span>Connect in one compressed window</span></summary><div class="body"><p>Once approved, the connections are established all in, inside a short window, rather than opened gradually as each workstream discovers it is blocked. This is where the schedule is recovered.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">05</span><span>Point to point, tested and validated</span></summary><div class="body"><p>Each connection is proven end to end against real data before it is relied on: read path, permissions, refresh behaviour, volume and failure handling. Results are recorded in a connection register the client owns and keeps.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">06</span><span>Then assemble the team</span></summary><div class="body"><p>Delivery consultants arrive to working access and current data. Discovery starts with evidence in front of it instead of a credentials queue, and the first weeks produce findings rather than tickets.</p><p class="maps"><b>Control</b> · <a href="#compliance">Provenance</a></p></div></details>
   </div>
 </div></section>
 
@@ -424,13 +503,13 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
       <p class="section-intro">Refinement is the discipline that turns raw project material into structured, cited, review-ready records. It supports the reasonable-measures test for trade-secret protection and makes the repository fit for AI to consult.</p>
     </div>
   </div>
-  <div class="standards">
-    <article class="standard"><span class="num">01</span><h3>Refined records, not raw dumps</h3><p>Every submission is structured, dated, named and cited to the source—so the repository stays a working asset rather than a shelf.</p></article>
-    <article class="standard"><span class="num">02</span><h3>Classification on the way in</h3><p>Material is tagged for sensitivity, ownership and retention at capture—so retrieval and access controls have something to enforce.</p></article>
-    <article class="standard"><span class="num">03</span><h3>Provenance travels with the artefact</h3><p>Source, author, decision reference and approval status stay attached—so every downstream use can be traced back.</p></article>
-    <article class="standard"><span class="num">04</span><h3>Reasonable measures, documented</h3><p>Access limits, agreements, awareness and handling rules are recorded—so the client can show what was done, not only intended.</p></article>
-    <article class="standard"><span class="num">05</span><h3>Superseded, not deleted</h3><p>Prior versions are marked and kept alongside the current record—so history remains reviewable and corrections stay auditable.</p></article>
-    <article class="standard"><span class="num">06</span><h3>Fit for AI to consult</h3><p>Structured well enough for retrieval to return the right passage, and cited well enough for the answer to be defensible.</p></article>
+  <div class="drill">
+    <details><summary><span class="num">01</span><span>Refined records, not raw dumps</span></summary><div class="body"><p>Every submission is structured, dated, named and cited to the source—so the repository stays a working asset rather than a shelf.</p><p class="maps"><b>Control</b> · <a href="#compliance">Provenance</a></p></div></details>
+    <details><summary><span class="num">02</span><span>Classification on the way in</span></summary><div class="body"><p>Material is tagged for sensitivity, ownership and retention at capture—so retrieval and access controls have something to enforce.</p><p class="maps"><b>Control</b> · <a href="#compliance">Classification at capture</a></p></div></details>
+    <details><summary><span class="num">03</span><span>Provenance travels with the artefact</span></summary><div class="body"><p>Source, author, decision reference and approval status stay attached—so every downstream use can be traced back.</p><p class="maps"><b>Control</b> · <a href="#compliance">Provenance</a></p></div></details>
+    <details><summary><span class="num">04</span><span>Reasonable measures, documented</span></summary><div class="body"><p>Access limits, agreements, awareness and handling rules are recorded—so the client can show what was done, not only intended.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">05</span><span>Superseded, not deleted</span></summary><div class="body"><p>Prior versions are marked and kept alongside the current record—so history remains reviewable and corrections stay auditable.</p><p class="maps"><b>Control</b> · <a href="#compliance">Version control and supersession</a></p></div></details>
+    <details><summary><span class="num">06</span><span>Fit for AI to consult</span></summary><div class="body"><p>Structured well enough for retrieval to return the right passage, and cited well enough for the answer to be defensible.</p><p class="maps"><b>Control</b> · <a href="#compliance">Provenance</a></p></div></details>
   </div>
 </div></section>
 
@@ -443,12 +522,12 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
       <p class="section-intro">Strategy, planning and forecasting have to be well informed of the tools already available inside the client's existing infrastructure—before rushing to buy third-party alternatives.</p>
     </div>
   </div>
-  <div class="standards">
-    <article class="standard"><span class="num">01</span><h3>Start from the estate</h3><p>List what the client already owns: SAP modules, Microsoft 365, collaboration platforms, security stack, existing AI surfaces and current agent frameworks.</p></article>
-    <article class="standard"><span class="num">02</span><h3>Match scope to capability</h3><p>Test each incoming scope item against the estate before writing a purchase line—new spend only where the gap is real.</p></article>
-    <article class="standard"><span class="num">03</span><h3>Fair-test first</h3><p>When an in-house surface plausibly covers the need, give it a documented, time-boxed trial before comparing to third-party pricing.</p></article>
-    <article class="standard"><span class="num">04</span><h3>Include the true cost of "free"</h3><p>Integration, refinement, adoption and support cost sit alongside licence cost in the business case—both sides count.</p></article>
-    <article class="standard"><span class="num">05</span><h3>Decision on the record</h3><p>Buy, build or activate—the choice is recorded with the evidence behind it, so the next program starts from a shorter list, not a blank page.</p></article>
+  <div class="drill">
+    <details><summary><span class="num">01</span><span>Start from the estate</span></summary><div class="body"><p>List what the client already owns: SAP modules, Microsoft 365, collaboration platforms, security stack, existing AI surfaces and current agent frameworks.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">02</span><span>Match scope to capability</span></summary><div class="body"><p>Test each incoming scope item against the estate before writing a purchase line—new spend only where the gap is real.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">03</span><span>Fair-test first</span></summary><div class="body"><p>When an in-house surface plausibly covers the need, give it a documented, time-boxed trial before comparing to third-party pricing.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">04</span><span>Include the true cost of "free"</span></summary><div class="body"><p>Integration, refinement, adoption and support cost sit alongside licence cost in the business case—both sides count.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <details><summary><span class="num">05</span><span>Decision on the record</span></summary><div class="body"><p>Buy, build or activate—the choice is recorded with the evidence behind it, so the next program starts from a shorter list, not a blank page.</p><p class="maps"><b>Control</b> · <a href="#compliance">Version control and supersession</a></p></div></details>
   </div>
 </div></section>
 
@@ -517,14 +596,14 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
       <p class="section-intro">Two practices carry most of the weight. Recorded working sessions become foundation material in the client's own repository—available to participants throughout the program, not archived at the end—so anyone can reassemble how a design direction was reached instead of relying on recollection. And every artefact is reviewed under version control, so approval is a recorded event against a specific version, not an email that agreed to something nobody can now produce.</p>
     </div>
   </div>
-  <div class="standards">
-    <article class="standard"><span class="num">01</span><h3>Recorded sessions become foundation material</h3><p>Teams recordings and transcripts from workshops, design sessions and decision meetings are filed to the project repository with consent and retention agreed up front. Discovery, fit-to-standard and design discussions stop evaporating when the call ends.</p></article>
-    <article class="standard"><span class="num">02</span><h3>Transcripts stay available during the program</h3><p>Participants can go back through the meeting transcripts while the work is live—reassembling the history of a topic, the reasoning behind a design direction and who raised which constraint. It is a working reference for the team, not a closeout archive nobody opens.</p></article>
-    <article class="standard"><span class="num">03</span><h3>Transcripts are refined, not dumped</h3><p>A session is filed as a dated, attributed entry with the decisions, exceptions, open items and owners drawn out and linked back to the recording. That is what makes a topic searchable months later. Raw audio alone is not a record; it is an unindexed liability.</p></article>
-    <article class="standard"><span class="num">04</span><h3>Every artefact is versioned</h3><p>Designs, specifications, requirements, test evidence and training material live as versioned files in the client's repository rather than as attachments circulating in mailboxes and chat threads.</p></article>
-    <article class="standard"><span class="num">05</span><h3>Review is a recorded event</h3><p>A named reviewer approves a specific version. The comments, the changes requested and the sign-off are kept alongside the artefact, so the control point can be shown months later without reconstructing it.</p></article>
-    <article class="standard"><span class="num">06</span><h3>AI output enters as a proposal</h3><p>Assisted work arrives as a proposed change against the current version, with its sources cited. It becomes program commitment only when a person accepts it. The accountable human is named on the record.</p></article>
-    <article class="standard wide"><span class="num">07</span><h3>The trail outlives the team</h3><p>What changed, who changed it, when, against which decision and out of which session stays readable after consultants rotate off. Access to recordings and transcripts follows the client's own consent and retention rules. The next team inherits the reasoning, not just the deliverable.</p></article>
+  <div class="drill">
+    <details><summary><span class="num">01</span><span>Recorded sessions become foundation material</span></summary><div class="body"><p>Teams recordings and transcripts from workshops, design sessions and decision meetings are filed to the project repository with consent and retention agreed up front. Discovery, fit-to-standard and design discussions stop evaporating when the call ends.</p><p class="maps"><b>Control</b> · <a href="#compliance">Consent and retention</a></p></div></details>
+    <details><summary><span class="num">02</span><span>Transcripts stay available during the program</span></summary><div class="body"><p>Participants can go back through the meeting transcripts while the work is live—reassembling the history of a topic, the reasoning behind a design direction and who raised which constraint. It is a working reference for the team, not a closeout archive nobody opens.</p><p class="maps"><b>Control</b> · <a href="#compliance">Consent and retention</a></p></div></details>
+    <details><summary><span class="num">03</span><span>Transcripts are refined, not dumped</span></summary><div class="body"><p>A session is filed as a dated, attributed entry with the decisions, exceptions, open items and owners drawn out and linked back to the recording. That is what makes a topic searchable months later. Raw audio alone is not a record; it is an unindexed liability.</p><p class="maps"><b>Control</b> · <a href="#compliance">Provenance</a></p></div></details>
+    <details><summary><span class="num">04</span><span>Every artefact is versioned</span></summary><div class="body"><p>Designs, specifications, requirements, test evidence and training material live as versioned files in the client's repository rather than as attachments circulating in mailboxes and chat threads.</p><p class="maps"><b>Control</b> · <a href="#compliance">Version control and supersession</a></p></div></details>
+    <details><summary><span class="num">05</span><span>Review is a recorded event</span></summary><div class="body"><p>A named reviewer approves a specific version. The comments, the changes requested and the sign-off are kept alongside the artefact, so the control point can be shown months later without reconstructing it.</p><p class="maps"><b>Control</b> · <a href="#compliance">Named human approval</a></p></div></details>
+    <details><summary><span class="num">06</span><span>AI output enters as a proposal</span></summary><div class="body"><p>Assisted work arrives as a proposed change against the current version, with its sources cited. It becomes program commitment only when a person accepts it. The accountable human is named on the record.</p><p class="maps"><b>Control</b> · <a href="#compliance">Named human approval</a></p></div></details>
+    <details><summary><span class="num">07</span><span>The trail outlives the team</span></summary><div class="body"><p>What changed, who changed it, when, against which decision and out of which session stays readable after consultants rotate off. Access to recordings and transcripts follows the client's own consent and retention rules. The next team inherits the reasoning, not just the deliverable.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
   </div>
 </div></section>
 
