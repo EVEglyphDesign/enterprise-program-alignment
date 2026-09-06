@@ -88,3 +88,11 @@ supersession, defensible on request). Row labels are now plain sentences — "Th
 record", "A person approves before anything counts", "Nothing is deleted to tidy the record" —
 with the formal term retained inside the row alongside the standard it maps to.
 
+## 37 — 2026-09-06 — Working-session request lands at Steel Cloud Solutions
+The CTA mail target moves from dany@dmzopen.ai to dany@steelcloudsolutions.com, subject
+"Enterprise Program Alignment — working session request". Lillian Corvington's own address
+(lilliancorvington@emersonrush.com) is deliberately not on the public surface. CTA copy restated
+in plain language: start with one contained workflow rather than "bring security into the
+conversation", and the reference to a "reading room" is dropped since that section is now
+research and references.
+
