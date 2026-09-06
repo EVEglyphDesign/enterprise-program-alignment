@@ -18,6 +18,7 @@ from reportlab.lib.enums import TA_LEFT
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 FONTS = pathlib.Path("/home/user/workspace/fonts")
+MARK = ROOT / "docs" / "assets" / "egd-mark.jpg"
 OUT = ROOT / "docs" / "EVEglyphDesign_Enterprise_Program_Alignment_Review_Brief.pdf"
 
 CREAM, CREAM2 = HexColor("#fdfaf4"), HexColor("#f7f2e7")
@@ -119,7 +120,7 @@ def story(total_pages_label):
 def make(path, page_total, content_hash, stamp):
     doc = BaseDocTemplate(str(path), pagesize=A5,
                           leftMargin=14 * mm, rightMargin=14 * mm,
-                          topMargin=15 * mm, bottomMargin=17 * mm,
+                          topMargin=18 * mm, bottomMargin=17 * mm,
                           title="Enterprise Program Alignment — Review Brief",
                           author="EVEglyphDesign", subject="Review brief")
 
@@ -127,24 +128,20 @@ def make(path, page_total, content_hash, stamp):
         canvas.saveState()
         canvas.setFillColor(CREAM)
         canvas.rect(0, 0, A5[0], A5[1], stroke=0, fill=1)
-        # watermark: EgD mark, very light
-        canvas.saveState()
-        canvas.translate(A5[0] / 2, A5[1] / 2)
-        canvas.scale(2.6, 2.6)
-        canvas.setStrokeColor(CREAM2)
-        canvas.setLineWidth(2)
-        canvas.lines([(-30, -26, 0, 26), (0, 26, 30, -26), (30, -26, -30, -26)])
-        canvas.circle(0, -6, 16, stroke=1, fill=0)
-        canvas.restoreState()
+        # the supplied EgD mark, small, top of each page
+        if MARK.exists():
+            side = 9 * mm
+            canvas.drawImage(str(MARK), 14 * mm, A5[1] - 9.6 * mm - side * 0.05,
+                             width=side, height=side, mask='auto')
         # rules
         canvas.setStrokeColor(LINE)
         canvas.setLineWidth(0.6)
-        canvas.line(14 * mm, A5[1] - 11 * mm, A5[0] - 14 * mm, A5[1] - 11 * mm)
+        canvas.line(14 * mm, A5[1] - 12 * mm, A5[0] - 14 * mm, A5[1] - 12 * mm)
         canvas.line(14 * mm, 13 * mm, A5[0] - 14 * mm, 13 * mm)
         canvas.setFont("Inter", 6.5)
         canvas.setFillColor(MUTE)
-        canvas.drawString(14 * mm, A5[1] - 9 * mm, "EVEglyphDesign · Enterprise Program Alignment")
-        canvas.drawRightString(A5[0] - 14 * mm, A5[1] - 9 * mm, stamp)
+        canvas.drawString(26 * mm, A5[1] - 6.5 * mm, "EVEglyphDesign · Enterprise Program Alignment")
+        canvas.drawRightString(A5[0] - 14 * mm, A5[1] - 6.5 * mm, stamp)
         canvas.drawString(14 * mm, 9.5 * mm,
                           f"© 2026 EVEglyphDesign. Controlled copy · Key {KEY_ID}")
         canvas.drawRightString(A5[0] - 14 * mm, 9.5 * mm,

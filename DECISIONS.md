@@ -105,3 +105,9 @@ clickable links, built by scripts/build_review_pdf.py — two passes so the stam
 matches, with SHA-256 content hash, Key EgD-KEY-2026-07 and UTC timestamp on every page.
 Comments return as dated entries; nothing is overwritten.
 
+
+## 39 — 2026-09-06 — The mark is the supplied file, not a redraw
+The EgD mark is now the artwork the operator supplied, stored once at docs/assets/egd-mark.jpg
+and referenced by the surface, the review page and the review PDF. The hand-drawn SVG
+approximation is removed everywhere. No agent redraws this mark; replacing the file replaces
+it in all three places.

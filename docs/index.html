@@ -42,7 +42,7 @@ img,svg{display:block;max-width:100%}
 .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
 .brand{display:flex;align-items:center;gap:var(--space-3);font-weight:700;text-decoration:none;color:var(--text)}
 .brand-mark{width:34px;height:34px;flex:0 0 auto}
-.brand-mark svg{width:100%;height:100%;color:var(--text)}
+.brand-mark img{width:100%;height:100%;object-fit:cover;border-radius:4px}
 .brand-text small{display:block;color:var(--muted);font-size:var(--text-xs);font-weight:500;letter-spacing:.01em}
 .navlinks{display:flex;align-items:center;gap:var(--space-5)}
 .navlinks a{font-size:var(--text-sm);font-weight:600;text-decoration:none}
@@ -241,14 +241,7 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 
 <header class="topbar"><nav class="nav wrap" aria-label="Primary">
   <a class="brand" href="#top" aria-label="AI Program Alignment home">
-    <span class="brand-mark" aria-hidden="true">
-      <!-- EgD mark: triangle with inscribed circle, sitting on baseline arc -->
-      <svg viewBox="0 0 100 100" role="img" aria-label="EgD mark">
-        <path d="M50 8 L92 80 L8 80 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="miter"/>
-        <circle cx="50" cy="52" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
-        <path d="M20 80 A30 30 0 0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".55"/>
-      </svg>
-    </span>
+    <span class="brand-mark" aria-hidden="true"><img src="assets/egd-mark.jpg" alt="EgD" width="34" height="34"></span>
     <span class="brand-text">Enterprise Program Alignment<small>for SAP transformation · EgD</small></span>
   </a>
   <div class="navlinks">
