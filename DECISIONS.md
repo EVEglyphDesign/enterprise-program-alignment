@@ -75,3 +75,16 @@ eight items to five (accelerator, compliance, SAP & AI, delivery, research). On 
 links were hidden entirely with no menu; the first two now render as compact pills so a phone
 reader can reach the accelerator and the controls from the header.
 
+## 35 — 2026-09-06 — Plain language opens the surface; technical detail is one click down
+The surface opened too technical. Zero egress, DMZ-bound model and fixed output are correct and
+stay on the page, but they are not the opening argument. The technical section moved below the
+plain-language sections and is now gated behind a single expander — "Open the technical detail" —
+so a business reader never has to read it and a security or IT reader can reach it in one click.
+Hero promise restated as "Their tools. Their rules. Their record."
+
+## 36 — 2026-09-06 — Commitments named the way a client would say them
+The seven compliance rows were labelled with the practitioner's terms (custody, provenance,
+supersession, defensible on request). Row labels are now plain sentences — "The client owns the
+record", "A person approves before anything counts", "Nothing is deleted to tidy the record" —
+with the formal term retained inside the row alongside the standard it maps to.
+
