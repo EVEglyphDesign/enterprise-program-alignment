@@ -186,6 +186,15 @@ details p{color:var(--muted);font-size:var(--text-sm);margin-top:var(--space-3);
 .drill.two{border-top:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--space-10)}
 .drill.two details{border-top:1px solid var(--divider);border-bottom:0}
 
+/* Gated technical layer */
+details.gate{border-bottom:0;padding:0;border:1px solid var(--divider);border-radius:var(--radius-lg);background:var(--surface-2)}
+details.gate>summary{padding:var(--space-5) var(--space-6);align-items:center;font-size:var(--text-base)}
+details.gate>summary .gate-note{display:block;font-weight:400;font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-top:var(--space-2)}
+details.gate>summary::after{font-size:var(--text-xl)}
+details.gate[open]>summary{border-bottom:1px solid var(--divider)}
+details.gate .drill{border-top:0;padding:0 var(--space-6) var(--space-2)}
+details.gate .drill details:last-of-type{border-bottom:0}
+
 /* Compliance spine */
 .spine{background:var(--ciso);color:#e6efeb;border-radius:var(--radius-lg);padding:clamp(var(--space-6),3vw,var(--space-10))}
 .spine .kicker{color:#8fd0bb}
@@ -243,8 +252,8 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <span class="brand-text">Enterprise Program Alignment<small>for SAP transformation · EgD</small></span>
   </a>
   <div class="navlinks">
-    <a href="#accelerator">The accelerator</a>
-    <a href="#compliance">Compliance</a>
+    <a href="#compliance">What the client keeps</a>
+    <a href="#accelerator">Technical detail</a>
     <a href="#semantic">SAP &amp; AI</a>
     <a href="#delivery">Delivery</a>
     <a href="#evidence">Research</a>
@@ -258,34 +267,14 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 <section class="hero" id="top"><div class="wrap">
   <p class="eyebrow">Enterprise Program Alignment</p>
   <h1>Keep people, partners, and approved AI working from the same playbook.</h1>
-  <p class="lead">Organize the decisions, definitions, source material and delivery work that guide an enterprise transformation—inside repositories the client owns and controls. Every claim below drills into the control that proves it.</p>
+  <p class="lead">Organize the decisions, definitions, source material and delivery work that guide an enterprise transformation—inside repositories the client owns and controls. Read the short version; open anything you want the detail on.</p>
   <div class="hero-actions">
-    <a class="btn primary" href="#accelerator">See how the accelerator works <span aria-hidden="true">↓</span></a>
-    <a class="btn secondary" href="#compliance">See the controls underneath</a>
+    <a class="btn primary" href="#how">See how it works <span aria-hidden="true">↓</span></a>
+    <a class="btn secondary" href="#compliance">What the client keeps</a>
   </div>
   <div class="promise">
-    <strong>Their tools.<br>Their boundary.<br>Zero egress.</strong>
-    <p>An additive accelerator, not a replacement. It runs on the client's existing tools and usage protocols, reads their baseline repositories in place, and reasons through a DMZ-bound model that returns fixed output into the client's own record. Nothing egresses.</p>
-  </div>
-</div></section>
-
-<!-- ADDITIVE ACCELERATOR: CLIENT TOOLS, ZERO EGRESS, DMZ-BOUND MODEL -->
-<section class="section" id="accelerator"><div class="wrap">
-  <div class="section-head">
-    <p class="kicker">What this actually is</p>
-    <div>
-      <h2>An additive accelerator that runs inside the client's own boundary.</h2>
-      <p class="section-intro">Not a platform to buy and not a place to send data. The client's existing tools, their usage protocols and their baseline repositories are the starting position. A DMZ-bound model does the reasoning on their side of the line, returns fixed output into their record, and keeps serving analytics after the program closes.</p>
-    </div>
-  </div>
-  <div class="drill">
-    <details><summary><span class="num">01</span><span>Runs on the tools the client already has</span></summary><div class="body"><p>The accelerator is additive. It uses the client's existing licences, identity, collaboration platform, repositories and data lake. No new platform is introduced, nothing is displaced, and no purchase is required before value starts.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
-    <details><summary><span class="num">02</span><span>Their usage protocols govern, not ours</span></summary><div class="body"><p>Access is requested and granted the way the client already grants it. Their classification scheme, their approval owners, their network standards, their retention policy. Where a standard exists we work to it — we do not open a parallel route for the convenience of the program.</p><p class="maps"><b>Control</b> · <a href="#compliance">Classification at capture</a></p></div></details>
-    <details><summary><span class="num">03</span><span>Baseline repositories are the starting position</span></summary><div class="body"><p>What the client already holds — the data lake, the document repositories, SAP, prior program material — is surveyed and taken as the baseline record. The program builds forward from it rather than starting a fresh store beside it.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
-    <details><summary><span class="num">04</span><span>Zero egress. Nothing leaves the boundary.</span></summary><div class="body"><p>Client data is not copied to a consultant tenant, not sent to a public model surface, and not used to train anything. Retrieval reaches into the client's record; nothing reaches back out. The zero-egress position is a design constraint, not a policy promise.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
-    <details><summary><span class="num">05</span><span>A DMZ-bound model does the reasoning</span></summary><div class="body"><p>The language model runs inside a client-controlled DMZ, on the client's side of the boundary. It consults the baseline repositories and the program record in place. The reasoning happens where the data already lives, under the client's own network and identity controls.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
-    <details><summary><span class="num">06</span><span>Fixed output, not open-ended generation</span></summary><div class="body"><p>The model returns defined, structured output — set formats, set fields, cited to source — that lands directly in the client record as a reviewable proposal. Output shape is fixed so it can be checked, approved and compared version to version.</p><p class="maps"><b>Control</b> · <a href="#compliance">Named human approval</a></p></div></details>
-    <details><summary><span class="num">07</span><span>Analytics continue after the program ends</span></summary><div class="body"><p>The DMZ-bound model, the baseline repositories and the accumulated program record stay with the client. Analytics keep running on the client's own estate once the consultants rotate off. The accelerator is not withdrawn at closeout — it is what the client keeps.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+    <strong>Their tools.<br>Their rules.<br>Their record.</strong>
+    <p>An accelerator that adds to what the client already has, rather than replacing it. It uses the tools they already own, works the way they already work, and everything it produces stays in their own record — theirs to keep when the program ends.</p>
   </div>
 </div></section>
 
@@ -293,8 +282,8 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 <section class="section" id="compliance"><div class="wrap">
   <div class="spine">
     <p class="kicker">The proof layer</p>
-    <h2>Every claim on this page has a control behind it.</h2>
-    <p class="lead-sm">Alignment is the offer. Compliance is what makes it survivable. Seven controls run underneath the whole operating model — each one an obligation the program can be held to, not a statement of intent. Open any control to see how it is evidenced and what it maps to.</p>
+    <h2>What the client keeps, and how it is protected.</h2>
+    <p class="lead-sm">The program's knowledge belongs to the client, and it stays protected while it is being used. Seven simple commitments carry that — each one something the program can be held to. Open any of them for the detail and the standard behind it.</p>
     <div class="drill">
       <details><summary><span class="num">01</span><span>Custody</span></summary><div class="body"><p>Program material is created and held in repositories the client owns and controls. No program knowledge accumulates in a consultant's tenant, a vendor platform or a chat transcript.</p><p>Evidenced by: repository ownership, role-based access, approved boundaries.</p><p class="maps"><b>Maps to</b> · ISO/IEC 42001 · CISA/NSA/FBI AI data security</p></div></details>
       <details><summary><span class="num">02</span><span>Classification at capture</span></summary><div class="body"><p>Sensitivity, ownership and retention are tagged when material enters the record, not retrofitted at audit time. Access control and retrieval have something to enforce from day one.</p><p>Evidenced by: classification scheme, tagging at submission, enforced retrieval boundaries.</p><p class="maps"><b>Maps to</b> · ISO/IEC 42001 · WIPO reasonable measures</p></div></details>
@@ -406,6 +395,28 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p><p class="plane"><b>Record</b>Cutover and training gates signed off on the record, not by email.</p></details></div>
     <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><details><summary>Access &amp; record</summary><p class="plane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p><p class="plane"><b>Record</b>Hypercare decisions and lessons return as versioned entries the next program inherits.</p></details></div>
   </div>
+</div></section>
+
+<!-- ADDITIVE ACCELERATOR: CLIENT TOOLS, ZERO EGRESS, DMZ-BOUND MODEL -->
+<section class="section" id="accelerator"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">For the technical reviewer</p>
+    <div>
+      <h2>How it runs, for the people who need to know.</h2>
+      <p class="section-intro">Everything above is the plain version. This is the same thing described for security, architecture and IT — the client's own tools and protocols, their existing repositories, and a model that runs on their side of the boundary. Open it if you need it; skip it if you don't.</p>
+    </div>
+  </div>
+  <details class="gate"><summary><span>Open the technical detail</span><span class="gate-note">Client tools · zero egress · DMZ-bound model · fixed output</span></summary>
+  <div class="drill">
+    <details><summary><span class="num">01</span><span>Runs on the tools the client already has</span></summary><div class="body"><p>The accelerator is additive. It uses the client's existing licences, identity, collaboration platform, repositories and data lake. No new platform is introduced, nothing is displaced, and no purchase is required before value starts.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">02</span><span>Their usage protocols govern, not ours</span></summary><div class="body"><p>Access is requested and granted the way the client already grants it. Their classification scheme, their approval owners, their network standards, their retention policy. Where a standard exists we work to it — we do not open a parallel route for the convenience of the program.</p><p class="maps"><b>Control</b> · <a href="#compliance">Classification at capture</a></p></div></details>
+    <details><summary><span class="num">03</span><span>Baseline repositories are the starting position</span></summary><div class="body"><p>What the client already holds — the data lake, the document repositories, SAP, prior program material — is surveyed and taken as the baseline record. The program builds forward from it rather than starting a fresh store beside it.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">04</span><span>Zero egress. Nothing leaves the boundary.</span></summary><div class="body"><p>Client data is not copied to a consultant tenant, not sent to a public model surface, and not used to train anything. Retrieval reaches into the client's record; nothing reaches back out. The zero-egress position is a design constraint, not a policy promise.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">05</span><span>A DMZ-bound model does the reasoning</span></summary><div class="body"><p>The language model runs inside a client-controlled DMZ, on the client's side of the boundary. It consults the baseline repositories and the program record in place. The reasoning happens where the data already lives, under the client's own network and identity controls.</p><p class="maps"><b>Control</b> · <a href="#compliance">Custody</a></p></div></details>
+    <details><summary><span class="num">06</span><span>Fixed output, not open-ended generation</span></summary><div class="body"><p>The model returns defined, structured output — set formats, set fields, cited to source — that lands directly in the client record as a reviewable proposal. Output shape is fixed so it can be checked, approved and compared version to version.</p><p class="maps"><b>Control</b> · <a href="#compliance">Named human approval</a></p></div></details>
+    <details><summary><span class="num">07</span><span>Analytics continue after the program ends</span></summary><div class="body"><p>The DMZ-bound model, the baseline repositories and the accumulated program record stay with the client. Analytics keep running on the client's own estate once the consultants rotate off. The accelerator is not withdrawn at closeout — it is what the client keeps.</p><p class="maps"><b>Control</b> · <a href="#compliance">Defensible on request</a></p></div></details>
+  </div>
+  </details>
 </div></section>
 
 <!-- CONNECTION-FIRST MOBILIZATION -->
