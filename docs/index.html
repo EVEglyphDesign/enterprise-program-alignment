@@ -127,6 +127,7 @@ img,svg{display:block;max-width:100%}
 
 /* Standards list (compact numbered detail) */
 .standards{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.standard.wide{grid-column:1/-1}
 .standard{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-md);padding:var(--space-5)}
 .standard .num{font-family:var(--font-display);color:var(--primary);font-size:var(--text-base);display:block;margin-bottom:var(--space-2)}
 .standard h3{font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-2)}
@@ -323,7 +324,7 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
   <div class="phases">
     <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p><p class="lane"><b>Access</b>Every system, data lake and repository the program must read is listed with the access method it already uses.</p><p class="lane"><b>Record</b>Scoping sessions are recorded and filed; the value case cites them.</p></div>
     <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p><p class="lane"><b>Access</b>One approved access plan raised as a single package, not a trickle of individual tickets.</p><p class="lane"><b>Record</b>Recording consent, retention and repository structure agreed before the first workshop.</p></div>
-    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><p class="lane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p><p class="lane"><b>Record</b>Workshops recorded; decisions extracted to versioned entries the same day.</p></div>
+    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><p class="lane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p><p class="lane"><b>Record</b>Workshops recorded and transcripts kept open to participants; decisions extracted to versioned entries the same day.</p></div>
     <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p><p class="lane"><b>Access</b>Proven read paths feed build and test; the connection register records what was used and by whom.</p><p class="lane"><b>Record</b>Each artefact approved by a named reviewer against a specific version.</p></div>
     <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><p class="lane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p><p class="lane"><b>Record</b>Cutover and training gates signed off on the record, not by email.</p></div>
     <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><p class="lane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p><p class="lane"><b>Record</b>Hypercare decisions and lessons return as versioned entries the next program inherits.</p></div>
@@ -489,7 +490,7 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
         <li>Agenda drawn from the repository—so context is shared, not reconstructed.</li>
         <li>Decisions, exceptions and open items captured in-session, not after.</li>
         <li>Actions have owners and due dates before people leave the call.</li>
-        <li>Recorded Teams sessions and their transcripts are filed to the project repository, with consent and retention agreed in advance.</li>
+        <li>Recorded Teams sessions and their transcripts are filed to the project repository and stay available to participants for the life of the program, with consent and retention agreed in advance.</li>
         <li>The record is filed to the repository within one working day.</li>
       </ol>
     </div>
@@ -512,16 +513,17 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <p class="kicker">Human control points</p>
     <div>
       <h2>The session is the foundation. The review is the control.</h2>
-      <p class="section-intro">Two practices carry most of the weight. Recorded working sessions become foundation material in the client's own repository, so the origin of a decision is the session itself rather than someone's recollection of it. And every artefact is reviewed under version control, so approval is a recorded event against a specific version—not an email that agreed to something nobody can now produce.</p>
+      <p class="section-intro">Two practices carry most of the weight. Recorded working sessions become foundation material in the client's own repository—available to participants throughout the program, not archived at the end—so anyone can reassemble how a design direction was reached instead of relying on recollection. And every artefact is reviewed under version control, so approval is a recorded event against a specific version, not an email that agreed to something nobody can now produce.</p>
     </div>
   </div>
   <div class="standards">
     <article class="standard"><span class="num">01</span><h3>Recorded sessions become foundation material</h3><p>Teams recordings and transcripts from workshops, design sessions and decision meetings are filed to the project repository with consent and retention agreed up front. Discovery, fit-to-standard and design discussions stop evaporating when the call ends.</p></article>
-    <article class="standard"><span class="num">02</span><h3>Transcripts are refined, not dumped</h3><p>A session is filed as a dated, attributed entry with the decisions, exceptions, open items and owners drawn out and linked to the recording. Raw audio alone is not a record; it is an unindexed liability.</p></article>
-    <article class="standard"><span class="num">03</span><h3>Every artefact is versioned</h3><p>Designs, specifications, requirements, test evidence and training material live as versioned files in the client's repository rather than as attachments circulating in mailboxes and chat threads.</p></article>
-    <article class="standard"><span class="num">04</span><h3>Review is a recorded event</h3><p>A named reviewer approves a specific version. The comments, the changes requested and the sign-off are kept alongside the artefact, so the control point can be shown months later without reconstructing it.</p></article>
-    <article class="standard"><span class="num">05</span><h3>AI output enters as a proposal</h3><p>Assisted work arrives as a proposed change against the current version, with its sources cited. It becomes program commitment only when a person accepts it. The accountable human is named on the record.</p></article>
-    <article class="standard"><span class="num">06</span><h3>The trail outlives the team</h3><p>What changed, who changed it, when and against which decision stays readable after consultants rotate off. The next team inherits the reasoning, not just the deliverable.</p></article>
+    <article class="standard"><span class="num">02</span><h3>Transcripts stay available during the program</h3><p>Participants can go back through the meeting transcripts while the work is live—reassembling the history of a topic, the reasoning behind a design direction and who raised which constraint. It is a working reference for the team, not a closeout archive nobody opens.</p></article>
+    <article class="standard"><span class="num">03</span><h3>Transcripts are refined, not dumped</h3><p>A session is filed as a dated, attributed entry with the decisions, exceptions, open items and owners drawn out and linked back to the recording. That is what makes a topic searchable months later. Raw audio alone is not a record; it is an unindexed liability.</p></article>
+    <article class="standard"><span class="num">04</span><h3>Every artefact is versioned</h3><p>Designs, specifications, requirements, test evidence and training material live as versioned files in the client's repository rather than as attachments circulating in mailboxes and chat threads.</p></article>
+    <article class="standard"><span class="num">05</span><h3>Review is a recorded event</h3><p>A named reviewer approves a specific version. The comments, the changes requested and the sign-off are kept alongside the artefact, so the control point can be shown months later without reconstructing it.</p></article>
+    <article class="standard"><span class="num">06</span><h3>AI output enters as a proposal</h3><p>Assisted work arrives as a proposed change against the current version, with its sources cited. It becomes program commitment only when a person accepts it. The accountable human is named on the record.</p></article>
+    <article class="standard wide"><span class="num">07</span><h3>The trail outlives the team</h3><p>What changed, who changed it, when, against which decision and out of which session stays readable after consultants rotate off. Access to recordings and transcripts follows the client's own consent and retention rules. The next team inherits the reasoning, not just the deliverable.</p></article>
   </div>
 </div></section>
 
