@@ -45,7 +45,7 @@ img,svg{display:block;max-width:100%}
 .brand-mark img{width:100%;height:100%;object-fit:cover;border-radius:4px}
 .brand-text small{display:block;color:var(--muted);font-size:var(--text-xs);font-weight:500;letter-spacing:.01em}
 .navlinks{display:flex;align-items:center;gap:var(--space-5)}
-.navlinks a{font-size:var(--text-sm);font-weight:600;text-decoration:none}
+.navlinks a{font-size:var(--text-sm);font-weight:600;text-decoration:none;white-space:nowrap}
 .theme{width:44px;height:44px;display:grid;place-items:center;border:1px solid color-mix(in oklab,var(--text) 14%,transparent);border-radius:var(--radius-full);background:var(--surface)}
 
 /* Hero */
@@ -69,6 +69,23 @@ img,svg{display:block;max-width:100%}
 .phasebar b{font-weight:700;color:var(--primary)}
 .phasebar span{color:var(--faint)}
 .phasebar a:hover b{color:var(--primary-hover)}
+
+/* CTA action note */
+.cta-act{display:grid;gap:var(--space-3);justify-items:start}
+.cta-note{font-size:var(--text-xs);opacity:.75;max-width:34ch}
+
+/* Pedigree band */
+.pedigree{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--space-10);align-items:start}
+.creds{display:grid;gap:var(--space-3)}
+.cred{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-md);padding:var(--space-4) var(--space-5)}
+.cred b{display:block;font-size:var(--text-sm);font-weight:600}
+.cred span{font-size:var(--text-xs);color:var(--muted)}
+.track{display:grid;gap:var(--space-4)}
+.track li{list-style:none;display:grid;grid-template-columns:8.5rem 1fr;gap:var(--space-4);padding-bottom:var(--space-4);border-bottom:1px solid var(--divider)}
+.track li:last-child{border-bottom:0;padding-bottom:0}
+.track .org{font-weight:600;font-size:var(--text-sm)}
+.track .org small{display:block;font-weight:400;color:var(--faint);font-size:var(--text-xs)}
+.track p{color:var(--muted);font-size:var(--text-sm)}
 
 /* Baseline-method note */
 .baseline-note{font-size:var(--text-sm);color:var(--muted);max-width:60ch;margin-bottom:var(--space-8);padding-left:var(--space-4);border-left:2px solid var(--divider)}
@@ -251,8 +268,8 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
 .footerline a:hover{text-decoration:underline}
 
 /* Responsive */
-@media(max-width:960px){.drill.two{grid-template-columns:1fr}.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic,.tier{grid-template-columns:1fr}.tier{gap:var(--space-3)}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:nth-child(n+4){border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
-@media(max-width:640px){.navlinks{gap:var(--space-3)}.navlinks a{display:none;font-size:var(--text-xs);padding:var(--space-2) var(--space-3);border:1px solid color-mix(in oklab,var(--text) 14%,transparent);border-radius:var(--radius-full);text-decoration:none;white-space:nowrap}.navlinks a:nth-of-type(1),.navlinks a:nth-of-type(2){display:inline-flex}.brand-text small{display:none}.hero-actions{display:grid}.btn{width:100%}.flow .flowline{grid-template-columns:1fr}.flow .step{border-right:0!important}.phases{grid-template-columns:1fr}}
+@media(max-width:960px){.drill.two{grid-template-columns:1fr}.section-head,.playbook,.promise,.split,.meeting,.cta,.schematic,.tier,.pedigree{grid-template-columns:1fr}.track li{grid-template-columns:1fr}.track .org small{display:inline;margin-left:var(--space-2)}.tier{gap:var(--space-3)}.schematic .arrows{display:none}.pillars{grid-template-columns:1fr}.standards{grid-template-columns:1fr}.phases{grid-template-columns:repeat(2,1fr)}.phase{border-right:0;border-bottom:1px solid var(--divider)}.phase:nth-child(n+4){border-bottom:1px solid var(--divider)}.phase:last-child{border-bottom:0}.flow .flowline{grid-template-columns:1fr 1fr}.flow .step{border-right:0;border-bottom:1px solid var(--divider)}.flow .step:nth-child(2n){border-right:0}.flow .step:nth-child(2){border-right:0}.quote{position:static}.source-grid{grid-template-columns:1fr}.cta{align-items:start}.cta .btn{width:100%}}
+@media(max-width:640px){.navlinks{gap:var(--space-3)}.navlinks a{display:none;font-size:var(--text-xs);padding:var(--space-2) var(--space-3);border:1px solid color-mix(in oklab,var(--text) 14%,transparent);border-radius:var(--radius-full);text-decoration:none;white-space:nowrap}.navlinks a:nth-of-type(1),.navlinks a:nth-of-type(2){display:inline-flex}.navlinks a:nth-of-type(2){max-width:9rem;overflow:hidden;text-overflow:ellipsis}.brand-text small{display:none}.hero-actions{display:grid}.btn{width:100%}.flow .flowline{grid-template-columns:1fr}.flow .step{border-right:0!important}.phases{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media print{.topbar,.hero-actions,.theme{display:none}.section{break-inside:avoid}body{background:#fff}.source{min-height:0}}
 </style>
@@ -267,10 +284,9 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
   </a>
   <div class="navlinks">
     <a href="#delivery">Activate phases</a>
+    <a href="#pedigree">Who runs it</a>
     <a href="#compliance">What the client keeps</a>
     <a href="#accelerator">Technical detail</a>
-    <a href="#semantic">SAP &amp; AI</a>
-    <a href="#tiers">Program team &amp; SI</a>
     <a href="#evidence">Research</a>
     <button class="theme" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true">◐</span></button>
   </div>
@@ -293,6 +309,34 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <strong>Their tools.<br>Their rules.<br>Their record.</strong>
     <p>An accelerator that adds to what the client already has, rather than replacing it. It uses the tools they already own, works the way they already work, and everything it produces stays in their own record — theirs to keep when the program ends.</p>
   </div>
+</div></section>
+
+<!-- PEDIGREE -->
+<section class="section"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker" id="pedigree">Who runs the program team</p>
+    <div>
+      <h2>Thirty years of SAP transformation leadership, held to an auditor's standard.</h2>
+      <p class="section-intro">The practice lead for this surface is Lilian Corvington — a career of directing enterprise SAP programs at scale, with a Certified Information Systems Auditor credential behind the controls this page commits to.</p>
+    </div>
+  </div>
+  <div class="pedigree">
+    <div class="creds">
+      <div class="cred"><b>Certified Information Systems Auditor (CISA)</b><span>ISACA</span></div>
+      <div class="cred"><b>Master in Business Transformation</b><span>Global SAP Transformation Academy</span></div>
+      <div class="cred"><b>SAP EMEA Gold Quality Award, 2010</b><span>Award judge 2011 · Global SAP Services Advisory Board</span></div>
+      <div class="cred"><b>MBA, Management Information Systems</b><span>McGill University</span></div>
+      <div class="cred"><a href="https://www.linkedin.com/in/lilian-corvington-9888905" target="_blank" rel="noopener noreferrer"><b>Full record on LinkedIn ↗</b></a><span>Roles, dates and publications</span></div>
+    </div>
+    <ul class="track">
+      <li><span class="org">IKEA / Ingka<small>2019 – present</small></span><p>Global Business Transformation Program Director. Greenfield standardization onto SAP S/4HANA, Global Ariba and shared services across 31 retail countries, group functions and non-retail entities.</p></li>
+      <li><span class="org">Vodafone<small>2007 – 2016</small></span><p>Global Program Director. One of the ten largest SAP-enabled transformations in the world: 26 countries on a single SAP instance, 100,000+ users across Finance, Supply Chain and HR.</p></li>
+      <li><span class="org">NSLC (IBM)<small>2005 – 2007</small></span><p>SAP Retail Programme Director. Canada's first “first-time-right” SAP IS-Retail deployment, integrated with new POS and BI platforms.</p></li>
+      <li><span class="org">Alcatel-Lucent<small>1999 – 2005</small></span><p>Global Head of Transformation and Process. Global SAP rollout integrated with i2, Siebel and Oracle legacy platforms.</p></li>
+      <li><span class="org">OSRAM · Deloitte<small>1991 – 1999</small></span><p>Enterprise SAP program leadership across North America and Europe; as a Deloitte partner, directed the first successful SAP implementation in Mexico.</p></li>
+    </ul>
+  </div>
+  <p class="notice"><b>Why this is on the page:</b> the controls in the proof layer are written the way an auditor would want to test them — classification at capture, provenance, named approval, retained supersession. The audit standard is not an add-on to the delivery experience; it comes from the same person.</p>
 </div></section>
 
 <!-- TIERS: PROGRAM TEAM ABOVE THE SI -->
@@ -720,7 +764,10 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
       <h2>Start with one workflow, not a program.</h2>
       <p>Pick one contained piece of the program and run it this way — shared context, access the client already controls, and a person approving the output. That is enough to see whether it holds.</p>
     </div>
-    <a class="btn" href="mailto:dany@steelcloudsolutions.com?subject=Enterprise%20Program%20Alignment%20%E2%80%94%20working%20session%20request">Request a working session</a>
+    <div class="cta-act">
+      <a class="btn" href="mailto:dany@steelcloudsolutions.com?subject=Enterprise%20Program%20Alignment%20%E2%80%94%20working%20session%20request&amp;body=Which%20workflow%20or%20phase%20we%20would%20start%20with%3A%0A%0AWho%20needs%20to%20be%20in%20the%20session%3A%0A%0APreferred%20timing%3A%0A%0A">Email Steel Cloud Solutions <span aria-hidden="true">↗</span></a>
+      <p class="cta-note">Opens your mail client to dany@steelcloudsolutions.com with a short subject and three prompts. No form, no tracking.</p>
+    </div>
   </div>
 </div></section>
 
