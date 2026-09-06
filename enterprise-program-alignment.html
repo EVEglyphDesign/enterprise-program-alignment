@@ -115,6 +115,8 @@ img,svg{display:block;max-width:100%}
 .phase .num{font-family:var(--font-display);color:var(--primary);font-size:var(--text-base)}
 .phase h3{font-size:var(--text-sm);font-weight:600;margin:var(--space-2) 0}
 .phase p{color:var(--muted);font-size:var(--text-xs)}
+.phase .lane{margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--divider)}
+.phase .lane b{display:block;font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--primary);margin-bottom:6px}
 
 /* Pillars (3-up cards) */
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
@@ -319,12 +321,31 @@ footer{padding-block:var(--space-8);border-top:1px solid var(--divider);color:va
     <div><h2>Six phases. One current version of the truth.</h2></div>
   </div>
   <div class="phases">
-    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p></div>
-    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p></div>
-    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p></div>
-    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p></div>
-    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p></div>
-    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p></div>
+    <div class="phase"><span class="num">01</span><h3>Discover</h3><p>Scope, value case and inventory of what the client already owns.</p><p class="lane"><b>Access</b>Every system, data lake and repository the program must read is listed with the access method it already uses.</p></div>
+    <div class="phase"><span class="num">02</span><h3>Prepare</h3><p>Team, governance, program playbook and access model in place.</p><p class="lane"><b>Access</b>One approved access plan raised as a single package, not a trickle of individual tickets.</p></div>
+    <div class="phase"><span class="num">03</span><h3>Explore</h3><p>Fit-to-standard workshops with decisions captured back to the repository.</p><p class="lane"><b>Access</b>Connections already tested point to point, so workshops open with real client data in front of them.</p></div>
+    <div class="phase"><span class="num">04</span><h3>Realize</h3><p>Build, configure, test—each artefact traceable to a decision and an owner.</p><p class="lane"><b>Access</b>Proven read paths feed build and test; the connection register records what was used and by whom.</p></div>
+    <div class="phase"><span class="num">05</span><h3>Deploy</h3><p>Cutover, training and controlled release with human sign-off on every gate.</p><p class="lane"><b>Access</b>Cutover runs on the same validated paths. Nothing new is opened under go-live pressure.</p></div>
+    <div class="phase"><span class="num">06</span><h3>Run</h3><p>Hypercare and continuous improvement returning lessons to the client record.</p><p class="lane"><b>Access</b>Connections re-certified on cadence and closed when a workstream ends. The register stays with the client.</p></div>
+  </div>
+</div></section>
+
+<!-- CONNECTION-FIRST MOBILIZATION -->
+<section class="section" id="mobilization"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">How the acceleration actually works</p>
+    <div>
+      <h2>Prove the connections. Then bring in the team.</h2>
+      <p class="section-intro">Most program delay is access delay. The team is assembled, and then it waits weeks for credentials, network paths and approvals nobody mapped in advance. We reverse the order: the data paths are opened, tested and validated before a single delivery consultant is mobilized.</p>
+    </div>
+  </div>
+  <div class="standards">
+    <article class="standard"><span class="num">01</span><h3>Map the access protocols on arrival</h3><p>We document every source the program will need—the data lake, the document repositories, SAP and the surrounding systems—and the access method each one already uses. Service accounts, network routes, approval owners, classification and retention rules. This is a survey of what exists, not a request to change it.</p></article>
+    <article class="standard"><span class="num">02</span><h3>Work to the client's current standards</h3><p>Access is requested the way the client already grants it. Where a standard exists, we use it. We do not introduce a parallel method, a new platform or an exception process for the convenience of the program.</p></article>
+    <article class="standard"><span class="num">03</span><h3>One coordinated request, not a trickle</h3><p>All access is raised together as a single approved plan with named owners and a stated purpose per source. Security, network and platform teams review one package of known scope instead of months of one-off exceptions arriving after the program has already started.</p></article>
+    <article class="standard"><span class="num">04</span><h3>Connect in one compressed window</h3><p>Once approved, the connections are established all in, inside a short window, rather than opened gradually as each workstream discovers it is blocked. This is where the schedule is recovered.</p></article>
+    <article class="standard"><span class="num">05</span><h3>Point to point, tested and validated</h3><p>Each connection is proven end to end against real data before it is relied on: read path, permissions, refresh behaviour, volume and failure handling. Results are recorded in a connection register the client owns and keeps.</p></article>
+    <article class="standard"><span class="num">06</span><h3>Then assemble the team</h3><p>Delivery consultants arrive to working access and current data. Discovery starts with evidence in front of it instead of a credentials queue, and the first weeks produce findings rather than tickets.</p></article>
   </div>
 </div></section>
 
