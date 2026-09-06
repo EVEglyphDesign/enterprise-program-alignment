@@ -96,3 +96,12 @@ in plain language: start with one contained workflow rather than "bring security
 conversation", and the reference to a "reading room" is dropped since that section is now
 research and references.
 
+## 38 — 2026-09-06 — A review lane for Lillian
+Review is now a place, not a message. docs/review.html is a non-indexed review copy: what changed
+in this pass, the five questions worth answering, and a pre-filled comment mail to
+dany@steelcloudsolutions.com. Linked from the surface footer. A phone-readable controlled PDF
+(docs/EVEglyphDesign_Enterprise_Program_Alignment_Review_Brief.pdf) carries the same brief with
+clickable links, built by scripts/build_review_pdf.py — two passes so the stamped page count
+matches, with SHA-256 content hash, Key EgD-KEY-2026-07 and UTC timestamp on every page.
+Comments return as dated entries; nothing is overwritten.
+
