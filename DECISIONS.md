@@ -32,3 +32,7 @@
 - Context quality is described as structured, current, selectively retrieved — never as "more context is always better."
 - SAP trademarks are used descriptively and imply no endorsement or partnership.
 - The surface is marked as general information, not legal advice.
+| 22 | 2026-09-05 | **CISO framing retired.** Hero eyebrow "A safer way to scale AI across a program" removed; secondary hero action is now "Explore the delivery packages" (was "Review the CISO evidence"). Lane label "For the CISO and risk team" becomes "Client-owned program knowledge"; evidence kicker becomes "Research and references". The research and source references are retained — only the security-pitch framing is removed. |
+| 23 | 2026-09-05 | Product name applied to brand, title and metadata: **Enterprise Program Alignment**. |
+| 24 | 2026-09-05 | New `#stewardship` section: the practice-lead role owning client program knowledge, confidential context, approved-AI rules, alignment to current decisions, provenance and human approval, and adoption governance. Role described by function; no individual is named on the public surface. |
+| 25 | 2026-09-05 | **Surface landed in a repository and published.** `EVEglyphDesign/enterprise-program-alignment`, Pages from `main:/docs`. Prior versions existed only as chat attachments, which is why each new thread restarted from nothing. |
