@@ -75,7 +75,7 @@ img,svg{display:block;max-width:100%}
 /* Two-lane split */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
 .lane{background:var(--surface-2);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:var(--space-8)}
-.lane.security{background:var(--ciso);color:#e6efeb;border-color:transparent}
+.lane.security{--ciso:#21312c;background:var(--ciso);color:#e6efeb;border-color:transparent}
 .lane.security .lane-label,.lane.security h3{color:#e6efeb}
 .lane.security .plain-list b{color:#fffdf8}
 .lane.security .plain-list span{color:#b6c5be}
@@ -196,7 +196,7 @@ details.gate .drill{border-top:0;padding:0 var(--space-6) var(--space-2)}
 details.gate .drill details:last-of-type{border-bottom:0}
 
 /* Compliance spine */
-.spine{background:var(--ciso);color:#e6efeb;border-radius:var(--radius-lg);padding:clamp(var(--space-6),3vw,var(--space-10))}
+.spine{--ciso:#21312c;background:var(--ciso);color:#e6efeb;border-radius:var(--radius-lg);padding:clamp(var(--space-6),3vw,var(--space-10))}
 .spine .kicker{color:#8fd0bb}
 .spine h2{color:#fffdf8;font-size:var(--text-xl);margin:var(--space-2) 0 var(--space-3)}
 .spine .lead-sm{color:#b6c5be;font-size:var(--text-sm);max-width:66ch;margin-bottom:var(--space-6)}
