@@ -124,3 +124,16 @@ date). The section closes on the adoption gate: a phase is closed on artefacts u
 people in named roles, with usage evidence attached to the gate paper — not on artefacts
 produced. Additive only. The hero, the Activate spine and every previously approved section are
 untouched; reordering and rewording of the hero is the operator's to make.
+
+## 41 — 2026-09-10 — The mesh layer, stated as additive and separately charged
+Adoption raises the obvious question of what people are being asked to adopt. A "The mesh layer"
+section now follows adoption and precedes the pedigree: connect rather than copy, one current
+position, delivered into Teams and the gate paper rather than behind a new login, and model
+capacity pointed at reconstruction and evidence assembly rather than at judgement. Two lanes
+carry the argument the operator asked for — beneficial (evidence arrives assembled, the record
+compounds, scale without headcount, it survives the team) and not disruptive (no new system of
+record, no new habits demanded, bounded by permission, reversible). The closing notice states the
+commercial position already agreed on the Hana engagement: AI model processing is optional and
+separable, either insourced to the client's own tenant or rebilled at cost against the provider's
+statement, never marked up and never inside the hours. Additive only; no previously approved
+section was altered.
