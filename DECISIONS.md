@@ -111,3 +111,16 @@ The EgD mark is now the artwork the operator supplied, stored once at docs/asset
 and referenced by the surface, the review page and the review PDF. The hand-drawn SVG
 approximation is removed everywhere. No agent redraws this mark; replacing the file replaces
 it in all three places.
+
+## 40 — 2026-09-10 — The page turns toward adoption and usage
+The surface argued production: faster artefacts, phase by phase. Production is not the outcome
+the client buys. A new "Adoption and usage" section is added directly under the hero, first in
+the primary navigation, holding the four adoption questions the enablement lane already uses —
+do the intended users know it exists, do they trust the answer, is it useful for real work, do
+they come back unprompted. Beside them, two lanes: what usage evidence is reported at each stage
+gate (reach, depth, trust, return), and what happens when something is not used (diagnose with
+the intended users, retire the unused, fix the moment rather than the tool, name an owner and a
+date). The section closes on the adoption gate: a phase is closed on artefacts used, by named
+people in named roles, with usage evidence attached to the gate paper — not on artefacts
+produced. Additive only. The hero, the Activate spine and every previously approved section are
+untouched; reordering and rewording of the hero is the operator's to make.
