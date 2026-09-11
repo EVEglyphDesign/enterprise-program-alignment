@@ -183,3 +183,9 @@ A new paragraph records the commercial nature of the offer: the services are add
 the method a client already runs, and are carried on inside a transformation community of
 practitioners working to the same standards, where the material is used, corrected and kept
 current between programs. No wording is published in anyone's name.
+
+## 47 — 2026-09-10 — The method is stated as evolving, not fixed
+A paragraph is added to the methodology section recording that the method continues to absorb new
+tools and practices as they prove themselves in real programs, added to what already works rather
+than replacing it, and that the standards are therefore kept as dated, revisable documents so the
+record shows when and why the method moved. Unattributed, in keeping with the review gate.
