@@ -167,3 +167,19 @@ adoptable protocol block — without linking to it, because the wording is unrev
 because distribution belongs to the practitioner, who sends it directly to the people who need
 it. Describing it keeps the claim visible without publishing words in anyone's name. The
 document itself is retained outside the repository until the wording is frozen.
+
+## 46 — 2026-09-10 — Softer register, and back to methodology, usage and repository structure
+The order returns to the method first: who runs the program team, then adoption and usage, then
+the repository and how it is organised, then the connecting layer and the AI usage protocols.
+The proof-materials framing is retired; the same four items are now presented as the structure of
+the repository — a readable review copy, a dated decision log, the published standards and the
+independent sources — described as the structure a client repository inherits in the first week.
+Headlines are softened throughout: "Read the record before you read the pitch" becomes "The work
+lives in a repository, organised so it can be read"; "a compliance mesh over the systems you
+already run" becomes "a connecting layer over the systems already in place"; "delivered is not
+adopted, used is the only proof" becomes "delivered is a start, used is what matters"; the
+blueprint claim is stated as something that emerges over time rather than as a category claim.
+A new paragraph records the commercial nature of the offer: the services are additive, adding to
+the method a client already runs, and are carried on inside a transformation community of
+practitioners working to the same standards, where the material is used, corrected and kept
+current between programs. No wording is published in anyone's name.
