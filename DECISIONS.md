@@ -159,3 +159,11 @@ long-standing approved introduction naming her as practice lead is untouched, as
 this session. The surface link now presents the protocol as an unattributed working draft under
 review. Standing rule recorded: no wording is published in her name, and nothing is treated as
 canon, until she has frozen it herself.
+
+## 45 — 2026-09-10 — The practitioner protocol is held, not published
+AI-SURFACE-PROTOCOLS.md is removed from the repository. The surface now describes the
+practitioner version — the four terms as a working protocol, a pre-task checklist and an
+adoptable protocol block — without linking to it, because the wording is unreviewed and
+because distribution belongs to the practitioner, who sends it directly to the people who need
+it. Describing it keeps the claim visible without publishing words in anyone's name. The
+document itself is retained outside the repository until the wording is frozen.
