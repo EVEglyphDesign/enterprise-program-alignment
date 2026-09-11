@@ -137,3 +137,14 @@ commercial position already agreed on the Hana engagement: AI model processing i
 separable, either insourced to the client's own tenant or rebilled at cost against the provider's
 statement, never marked up and never inside the hours. Additive only; no previously approved
 section was altered.
+
+## 43 — 2026-09-10 — A practitioner protocol Lilian can hand out
+AI-SURFACE-PROTOCOLS.md is published under Lilian's name as a short, copyable Markdown document
+for practitioners rather than platform teams: the one rule (the protocol decides, not the tool),
+the four terms (what it may see, must show, may not do, where it runs), a six-question
+pre-task checklist, good and poor targets, the four things that must not change, the four
+adoption questions, and a fill-in-the-blanks protocol block to paste into a team charter or
+README. It is deliberately two pages and carries no client names, no figures and no commercial
+ask. Markdown is the right format here under the canon because the artefact is functionally a
+repository document meant to be forked and edited. The AI usage protocols section on the surface
+links to it. Publication under her byline was confirmed with the operator before the push.
