@@ -1,8 +1,12 @@
 # Working with AI surfaces — a practitioner's protocol
 
-**Lilian Corvington** · Global Business Transformation Programme Director · CISA
-Part of [Enterprise Program Alignment](https://eveglyphdesign.github.io/enterprise-program-alignment/) ·
-[LinkedIn](https://www.linkedin.com/in/lilian-corvington-9888905)
+> **DRAFT — UNDER REVIEW. NOT ATTRIBUTED.**
+> This wording has not been reviewed or approved by the practice lead. No part of it is
+> canon, and no part of it is published in anyone's name, until the practitioner whose
+> method it describes has read it and frozen the words. Until then it is an
+> EVEglyphDesign working draft, offered for correction rather than for circulation.
+
+Published by [EVEglyphDesign](https://eveglyphdesign.github.io/enterprise-program-alignment/) as a working draft.
 
 A short, copyable protocol for people doing real programme work with AI surfaces — the
 assistants, copilots and chat tools already sitting inside your organisation. It is written
@@ -170,5 +174,5 @@ protocol stays honest, and how the next person understands why you did it that w
 
 ---
 
-*Shared for practitioners. Use it, adapt it, credit is welcome but not required.*
+*Draft for review. Not for circulation, and not attributed, until the wording is frozen.*
 *Background and the fuller programme model: [Enterprise Program Alignment](https://eveglyphdesign.github.io/enterprise-program-alignment/).*

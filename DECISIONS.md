@@ -148,3 +148,14 @@ README. It is deliberately two pages and carries no client names, no figures and
 ask. Markdown is the right format here under the canon because the artefact is functionally a
 repository document meant to be forked and edited. The AI usage protocols section on the surface
 links to it. Publication under her byline was confirmed with the operator before the push.
+
+## 44 — 2026-09-10 — Publication in Lilian's name is withdrawn; nothing is canon until she freezes the words
+Her byline is removed from AI-SURFACE-PROTOCOLS.md, which now opens with an explicit draft and
+non-attribution notice: not canon, not in anyone's name, not for circulation until the
+practitioner whose method it describes has read it and frozen the wording. The sentence added on
+2026-09-10 asserting that the method on the surface is hers is withdrawn from the page, and the
+section kicker returns to its previously approved form, "Who runs the program team". The
+long-standing approved introduction naming her as practice lead is untouched, as it predates
+this session. The surface link now presents the protocol as an unattributed working draft under
+review. Standing rule recorded: no wording is published in her name, and nothing is treated as
+canon, until she has frozen it herself.
