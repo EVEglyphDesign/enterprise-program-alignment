@@ -13,8 +13,8 @@
 <style>
 /* Emerson Rush corporate template — Raleway throughout, white paper, red accent, tint band. */
 :root{
-  --ink:#222940; --text:#333; --muted:#5a6070; --faint:#8a8f9b;
-  --line:#e3e6ea; --border:#d0d5dc; --divider:#e3e6ea;
+  --ink:#0f1524; --text:#181d2e; --muted:#3a4055; --faint:#5a6070;
+  --line:#dde1e6; --border:#c8ced5; --divider:#dde1e6;
   --bg:#ffffff; --surface:#ffffff; --surface-2:#ffffff; --offset:#f1f4f7; --tint:#f1f4f7;
   --accent:#c1272d; --accent-hover:#9a1f24; --accent-soft:#f9e6e7;
   --ciso:#1a2233; --inverse:#ffffff;
@@ -35,16 +35,16 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:5.5rem;-webkit-text-size-adjust:none;text-size-adjust:none}
-body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;font-weight:400}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;font-weight:400}
 a,button{font:inherit}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
 button{cursor:pointer;color:inherit;background:none;border:0}
 p,li{max-width:72ch;color:var(--text)}
-h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);line-height:1.2;font-weight:300}
-h1{font-weight:100;letter-spacing:.01em}
-h2{font-weight:300;letter-spacing:.01em}
-h3{font-weight:500}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);line-height:1.15;font-weight:400}
+h1{font-weight:200;letter-spacing:.005em}
+h2{font-weight:300;letter-spacing:.005em}
+h3{font-weight:500;color:var(--ink)}
 img,svg{display:block;max-width:100%}
 .skip{position:absolute;left:-9999px;top:var(--space-2);z-index:99;background:var(--accent);color:#fff;padding:var(--space-3)}
 .skip:focus{left:var(--space-2)}
@@ -71,31 +71,31 @@ img,svg{display:block;max-width:100%}
 .navlinks a:hover{color:var(--accent);text-decoration:none}
 
 /* Section container */
-.section{padding-block:clamp(var(--space-16),6vw,var(--space-24));background:#fff}
+.section{padding-block:clamp(var(--space-10),3.5vw,var(--space-16));background:#fff}
 .section.tint,.section.tint2{background:var(--tint)}
-.section-head{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);margin-bottom:var(--space-10);align-items:start}
-.kicker{font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
-.section-head h2{font-size:clamp(1.5rem,1rem + 1.4vw,2rem);margin-top:var(--space-3);font-weight:200;color:var(--ink)}
-.section-intro{color:var(--muted);margin-top:var(--space-4);max-width:56ch;font-size:var(--text-md);line-height:1.7}
+.section-head{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-6);margin-bottom:var(--space-6);align-items:start}
+.kicker{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.section-head h2{font-size:clamp(1.4rem,1rem + 1.1vw,1.85rem);margin-top:var(--space-2);font-weight:300;color:var(--ink)}
+.section-intro{color:var(--text);margin-top:var(--space-3);max-width:58ch;font-size:var(--text-md);line-height:1.6}
 
 /* Hero */
-.hero{padding-block:clamp(var(--space-16),7vw,var(--space-24));background:#fff}
-.eyebrow{font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-6)}
-.hero h1{font-size:clamp(2rem,1.2rem + 2.4vw,3.25rem);line-height:1.15;max-width:22ch;margin-bottom:var(--space-6);color:var(--ink);font-weight:100}
-.lead{font-size:var(--text-lg);color:var(--ink);max-width:60ch;margin-bottom:var(--space-6);font-weight:400}
-.lead b{font-weight:500}
-.hero-points{list-style:none;margin:var(--space-5) 0 var(--space-8);padding:0;display:grid;gap:var(--space-3);max-width:52rem}
-.hero-points li{position:relative;padding-left:var(--space-5);font-size:var(--text-md);line-height:1.65;color:var(--text)}
-.hero-points li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;background:var(--accent)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-8)}
+.hero{padding-block:clamp(var(--space-10),4vw,var(--space-16));background:#fff}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-4)}
+.hero h1{font-size:clamp(1.85rem,1.2rem + 2vw,2.85rem);line-height:1.12;max-width:24ch;margin-bottom:var(--space-4);color:var(--ink);font-weight:200}
+.lead{font-size:var(--text-lg);color:var(--ink);max-width:60ch;margin-bottom:var(--space-4);font-weight:400}
+.lead b{font-weight:600}
+.hero-points{list-style:none;margin:var(--space-4) 0 var(--space-5);padding:0;display:grid;gap:var(--space-2);max-width:52rem}
+.hero-points li{position:relative;padding-left:var(--space-5);font-size:var(--text-md);line-height:1.55;color:var(--text)}
+.hero-points li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--accent)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-5)}
 .btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:14px 28px;text-decoration:none;font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border:1px solid transparent;transition:var(--transition)}
 .btn.primary{background:var(--accent);color:#fff}
 .btn.primary:hover{background:var(--accent-hover);text-decoration:none}
 .btn.secondary{background:transparent;color:var(--ink);border-color:var(--ink)}
 .btn.secondary:hover{background:var(--ink);color:#fff;text-decoration:none}
-.promise{margin-top:var(--space-12);display:grid;grid-template-columns:1fr 2fr;gap:var(--space-8);padding-top:var(--space-8);border-top:1px solid var(--line)}
-.promise strong{font-family:var(--font-display);font-weight:300;font-size:var(--text-lg);line-height:1.3;color:var(--ink)}
-.promise p{color:var(--muted);font-size:var(--text-md);max-width:52ch;line-height:1.7}
+.promise{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 2fr;gap:var(--space-6);padding-top:var(--space-6);border-top:1px solid var(--line)}
+.promise strong{font-family:var(--font-display);font-weight:400;font-size:var(--text-lg);line-height:1.25;color:var(--ink)}
+.promise p{color:var(--text);font-size:var(--text-md);max-width:56ch;line-height:1.55}
 
 /* Activate phase bar */
 .phasebar{margin-bottom:var(--space-6)}
@@ -109,7 +109,7 @@ img,svg{display:block;max-width:100%}
 .cta-note{font-size:12px;color:var(--muted);max-width:34ch;line-height:1.6}
 
 /* Baseline note */
-.baseline-note{font-size:var(--text-md);color:var(--muted);max-width:60ch;margin-bottom:var(--space-8);padding-left:var(--space-4);border-left:2px solid var(--accent);line-height:1.65}
+.baseline-note{font-size:var(--text-md);color:var(--text);max-width:60ch;margin-bottom:var(--space-5);padding-left:var(--space-4);border-left:2px solid var(--accent);line-height:1.55}
 
 /* Pedigree */
 .pedigree{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--space-10);align-items:start}
@@ -122,7 +122,7 @@ img,svg{display:block;max-width:100%}
 .track li:last-child{border-bottom:0;padding-bottom:0}
 .track .org{font-weight:500;font-size:var(--text-md);color:var(--ink)}
 .track .org small{display:block;font-weight:400;color:var(--faint);font-size:var(--text-sm);margin-top:2px}
-.track p{color:var(--text);font-size:var(--text-md);line-height:1.6}
+.track p{color:var(--text);font-size:var(--text-md);line-height:1.55}
 
 /* Tier stack */
 .tierstack{display:grid;gap:var(--space-3)}
@@ -133,7 +133,7 @@ img,svg{display:block;max-width:100%}
 .tier.lead-tier p{color:#b5bccb}
 .tier-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-2)}
 .tier h3{font-family:var(--font-display);font-weight:400;font-size:var(--text-lg);color:var(--ink)}
-.tier p{color:var(--text);font-size:var(--text-md);line-height:1.6}
+.tier p{color:var(--text);font-size:var(--text-md);line-height:1.5}
 
 /* Two-lane split */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
@@ -145,12 +145,12 @@ img,svg{display:block;max-width:100%}
 .lane.security p{color:#b5bccb}
 .lane-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--space-3)}
 .lane h3{font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:var(--space-4);font-weight:400;color:var(--ink)}
-.lane p{color:var(--text);margin-bottom:var(--space-6);line-height:1.7}
+.lane p{color:var(--text);margin-bottom:var(--space-4);line-height:1.55}
 .plain-list{list-style:none;display:grid;gap:var(--space-4);padding:0;margin:0}
 .plain-list li{display:grid;grid-template-columns:auto 1fr;gap:var(--space-4);align-items:baseline;list-style:none}
 .plain-list .num{font-family:var(--font-display);color:var(--accent);font-weight:400;font-size:var(--text-md)}
 .plain-list b{display:block;font-weight:500;margin-bottom:var(--space-1);color:var(--ink)}
-.plain-list span{color:var(--muted);font-size:var(--text-sm);line-height:1.6}
+.plain-list span{color:var(--text);font-size:var(--text-sm);line-height:1.5}
 
 /* Flowline (4 across) */
 .flow .flowline{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:#fff}
@@ -158,7 +158,7 @@ img,svg{display:block;max-width:100%}
 .flow .step:last-child{border-right:0}
 .flow .num{font-family:var(--font-display);font-size:var(--text-lg);color:var(--accent);margin-bottom:var(--space-3);font-weight:300}
 .flow .step h3{font-size:var(--text-md);font-weight:500;margin-bottom:var(--space-2);color:var(--ink)}
-.flow .step p{color:var(--muted);font-size:var(--text-sm);line-height:1.65}
+.flow .step p{color:var(--text);font-size:var(--text-sm);line-height:1.5}
 .flow .flowline+.split{margin-top:var(--space-6)}
 
 /* Playbook */
@@ -170,7 +170,7 @@ img,svg{display:block;max-width:100%}
 .content-row:last-child{border-bottom:0;padding-bottom:0}
 .content-row svg{width:20px;height:20px;color:var(--accent);margin-top:.35rem}
 .content-row h3{font-size:var(--text-md);font-weight:500;margin-bottom:var(--space-2);color:var(--ink)}
-.content-row p{color:var(--muted);font-size:var(--text-sm);line-height:1.65}
+.content-row p{color:var(--text);font-size:var(--text-sm);line-height:1.5}
 
 /* Phase strip */
 .phases{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);overflow:hidden;background:#fff}
@@ -179,7 +179,7 @@ img,svg{display:block;max-width:100%}
 .phase:nth-child(n+4){border-bottom:0}
 .phase .num{font-family:var(--font-display);color:var(--accent);font-size:var(--text-md);font-weight:300}
 .phase h3{font-size:var(--text-md);font-weight:500;margin:var(--space-2) 0;color:var(--ink)}
-.phase>p{color:var(--muted);font-size:var(--text-sm);line-height:1.65}
+.phase>p{color:var(--text);font-size:var(--text-sm);line-height:1.5}
 .phase-tag{display:inline-block;margin-top:var(--space-3);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:3px 8px}
 
 /* Evidence / research grid */
@@ -188,7 +188,7 @@ img,svg{display:block;max-width:100%}
 .ev-card .ev-tag{display:flex;justify-content:space-between;gap:var(--space-3);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .ev-card .ev-tag small{color:var(--muted);letter-spacing:.15em}
 .ev-card h3{font-family:var(--font-display);font-weight:400;font-size:var(--text-md);color:var(--ink)}
-.ev-card p{color:var(--muted);font-size:var(--text-sm);line-height:1.65;flex:1}
+.ev-card p{color:var(--text);font-size:var(--text-sm);line-height:1.5;flex:1}
 .ev-card a{color:var(--accent);font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:500}
 
 /* Proof strip */
@@ -203,9 +203,9 @@ img,svg{display:block;max-width:100%}
 .cta-panel .btn{margin-top:var(--space-3)}
 
 /* Footer */
-footer{background:var(--ciso);color:#b5bccb;padding-block:var(--space-10);font-size:var(--text-sm)}
+footer{background:var(--ciso);color:#d0d5df;padding-block:var(--space-8);font-size:var(--text-sm)}
 footer .footerline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-6)}
-footer p{color:#b5bccb;line-height:1.6;max-width:60ch}
+footer p{color:#d0d5df;line-height:1.55;max-width:60ch}
 footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px}
 footer a:hover{color:#fff;border-bottom-color:#fff;text-decoration:none}
 footer p a{color:#fff}
@@ -217,14 +217,14 @@ summary{cursor:pointer;font-weight:500;color:var(--ink);font-size:var(--text-md)
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-family:var(--font-display);color:var(--accent);font-size:1.4rem;font-weight:200;transition:transform var(--transition)}
 details[open] summary::after{content:"−"}
-details p,details ul{margin-top:var(--space-4);color:var(--text);font-size:var(--text-md);line-height:1.7}
+details p,details ul{margin-top:var(--space-3);color:var(--text);font-size:var(--text-md);line-height:1.55}
 details ul{padding-left:var(--space-6)}
 
 /* Source grid (Repository + Research sections) */
 .source-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
 .source{background:#fff;border:1px solid var(--line);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);min-height:210px}
 .source h3{font-family:var(--font-display);font-size:var(--text-md);font-weight:500;line-height:1.3;color:var(--ink)}
-.source p{color:var(--muted);font-size:var(--text-sm);flex:1;line-height:1.65}
+.source p{color:var(--text);font-size:var(--text-sm);flex:1;line-height:1.5}
 .source a{color:var(--accent);font-weight:500;font-size:12px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none}
 .source a:hover{text-decoration:underline}
 .source-meta{display:flex;justify-content:space-between;gap:var(--space-3);font-size:11px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
@@ -298,7 +298,7 @@ details.gate .drill details:last-of-type{border-bottom:0}
 .drill summary .num{font-family:var(--font-display);font-weight:400;color:var(--accent);font-size:var(--text-sm)}
 .drill summary::after{justify-self:end;line-height:1}
 .drill .body{padding:0 0 var(--space-5) calc(1.75rem + var(--space-3))}
-.drill .body p{margin-top:0;color:var(--text);font-size:var(--text-md);max-width:68ch;line-height:1.7}
+.drill .body p{margin-top:0;color:var(--text);font-size:var(--text-md);max-width:70ch;line-height:1.55}
 .drill .body p + p{margin-top:var(--space-3)}
 .drill .maps{margin-top:var(--space-3);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .drill .maps b{color:var(--accent);font-weight:500;letter-spacing:.18em}
@@ -989,42 +989,56 @@ details.gate .drill details:last-of-type{border-bottom:0}
     <p class="kicker">The organising idea</p>
     <div>
       <h2>Decision Intelligence, tied to data governance and program control.</h2>
-      <p class="section-intro">The advisory practice introduces Decision Intelligence into transformation programs and binds it to two things the client already needs to keep working: data governance and program control. Not as a new platform. As a discipline that names, records and improves the decisions the program has to make anyway.</p>
+      <p class="section-intro">A discipline that names, records and improves the decisions the program has to make anyway. Not a new platform.</p>
     </div>
   </div>
 
-  <div class="split" style="grid-template-columns:1fr 1fr;gap:var(--space-4)">
-    <div class="lane">
-      <p class="lane-label">What Decision Intelligence is</p>
-      <h3>A practical discipline for making, recording and improving decisions.</h3>
-      <p>Gartner defines Decision Intelligence as “a practical discipline that advances decision making by explicitly understanding and engineering how decisions are made and how outcomes are evaluated, managed and improved via feedback.” Cassie Kozyrkov, who ran the field at Google, frames it more bluntly as the discipline of turning information into better action at any scale.</p>
-      <ul class="plain-list">
-        <li><b class="num">01</b><div><b>Frame the decision first</b><span>Name the recurring decision, who owns it, on what cadence, and what a good outcome looks like in numbers — before touching the data.</span></div></li>
-        <li><b class="num">02</b><div><b>Model the logic explicitly</b><span>Write down the inputs, the rules and the human control points so the same decision can be made the same way twice.</span></div></li>
-        <li><b class="num">03</b><div><b>Feed it from governed data</b><span>Pull from the client’s own systems of record with lineage intact, not from copies pulled into a project workspace.</span></div></li>
-        <li><b class="num">04</b><div><b>Execute with human control points</b><span>People decide on the record. AI proposes, evidences and explains, under protocol.</span></div></li>
-        <li><b class="num">05</b><div><b>Learn from realised outcomes</b><span>Compare what was decided against what happened, and improve the model — the decision itself, not just the dashboard.</span></div></li>
-      </ul>
-    </div>
+  <ol class="drill">
+    <li><details><summary><span class="num">01</span><span>Frame the decision first, before the data.</span></summary><div class="body">
+      <p>Name the recurring decision, its owner, its cadence, and what a good outcome looks like in numbers. Kozyrkov’s central rule: frame the decision before you touch the data.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">02</span><span>Model the logic explicitly.</span></summary><div class="body">
+      <p>Write down the inputs, the rules and the human control points so the same decision can be made the same way twice. The DMN standard (Decision Model and Notation) is the working format for this.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">03</span><span>Feed it from governed data.</span></summary><div class="body">
+      <p>The same data that satisfies audit and privacy is the data the decision model reads. One record, one lineage, one story — not copies pulled into a project workspace.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">04</span><span>Execute with human control points.</span></summary><div class="body">
+      <p>People decide on the record. AI proposes, evidences and explains, under protocol — never as a shortcut past the approver.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">05</span><span>Learn from realised outcomes.</span></summary><div class="body">
+      <p>Compare what was decided against what actually happened, and improve the model — the decision itself, not just the dashboard.</p>
+    </div></details></li>
+  </ol>
 
-    <div class="lane security">
-      <p class="lane-label">How the advisory ties it in</p>
-      <h3>Data governance and program control are where Decision Intelligence lives.</h3>
-      <p>Most transformation programs already ship a data governance workstream and a program control workstream. Decision Intelligence is what makes the two of them actually useful to the executive team: it turns governance from a policy document into the way decisions get made, and turns program control from a status report into a record of decisions taken.</p>
-      <ul class="plain-list">
-        <li><b class="num">A</b><div><b>Data governance becomes the source of truth for decisions</b><span>The same governed data that satisfies audit and privacy is the data the decision model reads from. One record, one lineage, one story.</span></div></li>
-        <li><b class="num">B</b><div><b>Program control becomes the decision log</b><span>Every stage-gate approval is a decision with a named owner, evidence pack and outcome measure. The steering committee reviews decisions, not slides.</span></div></li>
-        <li><b class="num">C</b><div><b>AI enters under protocol, not as a shortcut</b><span>Models propose options, explain their reasoning, and cite the governed data they used. The human control point decides. The record shows who decided, on what, and why.</span></div></li>
-        <li><b class="num">D</b><div><b>Safety of the record leads</b><span>Efficiency and reuse are pursued only where the decision record stays intact and auditable. That constraint is not a slower path — it is what makes the acceleration hold up after the program closes.</span></div></li>
-      </ul>
+  <div class="section-head" style="margin-top:var(--space-10);margin-bottom:var(--space-6)">
+    <p class="kicker">How the advisory ties it in</p>
+    <div>
+      <h2>Data governance and program control are where DI lives.</h2>
+      <p class="section-intro">Every transformation program already ships both workstreams. DI is what turns them into the executive team’s working instrument — not another deck.</p>
     </div>
   </div>
 
-  <div class="proof-strip" style="margin-top:var(--space-8)">
-    <div><span class="num">›</span><span><b>Further reading, curated:</b> six independent sources below, each with a short note on what it contributes. None are sales material for a specific tool.</span></div>
+  <ol class="drill">
+    <li><details><summary><span class="num">A</span><span>Data governance becomes the source of truth for decisions.</span></summary><div class="body">
+      <p>The governed data that already satisfies audit, privacy and retention is the data the decision model reads from. One system of record does two jobs at once. There is no shadow dataset for “the AI to use” and no reconciliation step between the audit view and the decision view.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">B</span><span>Program control becomes the decision log.</span></summary><div class="body">
+      <p>Every stage-gate approval is recorded as a decision with a named owner, the evidence pack it was based on, and the outcome measure it will be judged against. The steering committee reviews decisions, not slides, and the log survives the program.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">C</span><span>AI enters under protocol, not as a shortcut.</span></summary><div class="body">
+      <p>Models propose options, explain their reasoning, and cite the governed data they used. The named human decides. The record shows who decided, on what evidence, and why — which is what makes the output defensible after the program closes.</p>
+    </div></details></li>
+    <li><details><summary><span class="num">D</span><span>Safety of the record leads. Then efficiency and reuse.</span></summary><div class="body">
+      <p>Efficiency and reusability improve as second-order effects, not as the objective. The constraint that the decision record stays intact and auditable is what makes the acceleration hold. That order does not change.</p>
+    </div></details></li>
+  </ol>
+
+  <div class="proof-strip" style="margin-top:var(--space-6)">
+    <div><span class="num">›</span><span><b>Further reading, curated — six independent sources.</b> Definition, origin, practitioner voice, analyst research, executive framing, and a workable five-stage loop.</span></div>
   </div>
 
-  <div class="evidence-grid" style="margin-top:var(--space-6)">
+  <div class="evidence-grid" style="margin-top:var(--space-4)">
     <div class="ev-card">
       <div class="ev-tag"><span>Definition</span><small>Gartner</small></div>
       <h3>Gartner IT Glossary — Decision Intelligence</h3>
