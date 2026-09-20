@@ -116,6 +116,13 @@ img,svg{display:block;max-width:100%}
 .hero-points li{position:relative;padding-left:var(--space-5);font-size:var(--text-md);line-height:1.55;color:var(--text)}
 .hero-points li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--accent)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-5)}
+.grid{display:grid;gap:var(--space-5)}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.grid.three{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);padding:var(--space-5) var(--space-5);border-radius:2px}
+.card .kicker{margin-top:0}
+.card h3{margin:.5rem 0 .75rem;font-size:1.1rem;font-weight:600;color:var(--ink)}
+.card p{margin:0;color:var(--text);font-size:.95rem;line-height:1.55}
 .btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:14px 28px;text-decoration:none;font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border:1px solid transparent;transition:var(--transition)}
 .btn.primary{background:var(--accent);color:#fff}
 .btn.primary:hover{background:var(--accent-hover);text-decoration:none}
