@@ -52,11 +52,39 @@ img,svg{display:block;max-width:100%}
 .wrap{width:min(calc(100% - 2rem),var(--wide));margin-inline:auto}
 
 /* Utility bar */
-.utility{background:#fff;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.utility .wrap{display:flex;justify-content:flex-end;gap:var(--space-5);min-height:36px;align-items:center}
-.utility a{color:var(--muted);text-decoration:none}
-.utility a:hover{color:var(--accent);text-decoration:none}
-.utility .sep{color:var(--line)}
+/* Emerson Rush utility strip */
+.er-utility{background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);font-family:'Raleway',sans-serif;font-size:12px;color:#333}
+.er-utility .wrap{display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:var(--space-4);flex-wrap:wrap}
+.er-util-left{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
+.er-util-right{display:flex;align-items:center;gap:var(--space-3)}
+.er-utility a{color:#333;text-decoration:none;font-weight:400}
+.er-utility a:hover{color:var(--accent);text-decoration:none}
+.er-utility .support{color:#003300}
+.er-utility .sep{color:#333;font-weight:300}
+.er-utility .lang{font-weight:500;letter-spacing:.05em;padding:0 2px}
+.er-utility .lang.active{color:#000;font-weight:700}
+.er-utility .lang:hover{color:var(--accent)}
+
+/* Emerson Rush main header */
+.er-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.er-header-inner{display:flex;justify-content:space-between;align-items:center;gap:var(--space-6);min-height:82px;padding-block:var(--space-3)}
+.er-brand{display:inline-flex;align-items:center}
+.er-brand img{height:53px;width:auto;display:block}
+.er-nav{display:flex;align-items:center;gap:clamp(12px, 2vw, 32px);flex-wrap:wrap;justify-content:flex-end}
+.er-nav a{font-family:'Raleway',sans-serif;font-size:12px;font-weight:400;color:#000;text-transform:uppercase;letter-spacing:.15em;text-decoration:none;padding:6px 0;transition:color .2s}
+.er-nav a:hover{color:var(--accent);text-decoration:none}
+.er-nav a.current{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:4px}
+
+/* Page crumb strip */
+.page-crumb{background:var(--tint);border-bottom:1px solid var(--line);padding-block:var(--space-3)}
+.page-crumb .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap}
+.crumb{font-size:12px;color:var(--muted);letter-spacing:.05em;margin:0;font-weight:400}
+.crumb a{color:var(--ink);text-decoration:none;font-weight:500}
+.crumb a:hover{color:var(--accent);text-decoration:none}
+.crumb span{color:var(--ink);font-weight:500}
+.crumb-actions{display:flex;gap:var(--space-4);align-items:center;flex-wrap:wrap}
+.crumb-actions a{font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;color:var(--ink);text-transform:uppercase;letter-spacing:.15em;text-decoration:none}
+.crumb-actions a:hover{color:var(--accent);text-decoration:none}
 
 /* Topbar */
 .topbar{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
@@ -330,7 +358,11 @@ details.gate .drill details:last-of-type{border-bottom:0}
   .track li{grid-template-columns:1fr}
   .navlinks{gap:var(--space-4)}
   .navlinks a{font-size:11px;letter-spacing:.15em}
-  .utility .wrap{justify-content:center;flex-wrap:wrap;gap:var(--space-3)}
+  .er-utility .wrap{justify-content:center;flex-wrap:wrap;gap:var(--space-3)}
+  .er-header-inner{flex-direction:column;gap:var(--space-4);align-items:flex-start}
+  .er-nav{justify-content:flex-start}
+  .crumb-actions{gap:var(--space-3)}
+  .crumb-actions a{font-size:10px}
 }
 @media (max-width:640px){
   .navlinks{display:none}
@@ -342,30 +374,46 @@ details.gate .drill details:last-of-type{border-bottom:0}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="utility"><div class="wrap">
-  <a href="https://www.linkedin.com/in/lilian-corvington-9888905" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <span class="sep">|</span>
-  <a href="mailto:dany@steelcloudsolutions.com?subject=Working%20session%20request%20%E2%80%94%20Transformation%20Program%20Decision%20Intelligence%20Advisory">Request a working session</a>
-  <span class="sep">|</span>
-  <a href="EVEglyphDesign_Enterprise_Program_Alignment_Review_Brief.pdf">Review brief (PDF)</a>
+<!-- Emerson Rush utility strip -->
+<div class="er-utility"><div class="wrap">
+  <div class="er-util-left">
+    <a href="https://www.emersonrush.com/news/">News</a><span class="sep">|</span>
+    <a href="tel:+16479266411">Talk to an expert</a><span class="sep">|</span>
+    <a href="tel:+15147003759" class="support">Client Support</a><span class="sep">|</span>
+  </div>
+  <div class="er-util-right">
+    <span class="lang active">EN</span>
+    <a class="lang" href="https://www.emersonrush.com/es/">ES</a>
+    <a class="lang" href="https://www.emersonrush.com/fr/">FR</a>
+  </div>
 </div></div>
 
-<header class="topbar"><nav class="nav wrap" aria-label="Primary">
-  <a class="brand" href="#top" aria-label="Transformation Program Decision Intelligence Advisory home">
-    <span class="brand-text">
-      <b>Transformation Program Decision Intelligence Advisory</b>
-      <small>Independent advisory to boards and executive teams · Lilian Corvington</small>
-    </span>
+<!-- Emerson Rush main header -->
+<header class="er-header"><div class="wrap er-header-inner">
+  <a class="er-brand" href="https://www.emersonrush.com/" aria-label="Emerson Rush home">
+    <img src="emerson-rush-logo.svg" alt="Emerson Rush — It's all about the right people" width="260" height="53">
   </a>
-  <div class="navlinks">
-    <a href="#pedigree">Advisor</a>
+  <nav class="er-nav" aria-label="Primary">
+    <a href="https://www.emersonrush.com/">Home</a>
+    <a href="https://www.emersonrush.com/about-us/">About us</a>
+    <a href="https://www.emersonrush.com/service-plans/">Service Plans</a>
+    <a href="https://www.emersonrush.com/business-transformation/">Business Solutions</a>
+    <a href="https://www.emersonrush.com/training/">Training</a>
+    <a href="https://www.emersonrush.com/contact/">Contact</a>
+    <a class="current" href="#top" aria-current="page">Advisory</a>
+  </nav>
+</div></header>
+
+<!-- Page sub-header: the advisory context inside the Emerson Rush site -->
+<div class="page-crumb"><div class="wrap">
+  <p class="crumb"><a href="https://www.emersonrush.com/">Emerson Rush</a> › <span>Transformation Program Decision Intelligence Advisory</span></p>
+  <div class="crumb-actions">
+    <a href="#executive-brief">Executive brief</a>
     <a href="#decision-intelligence">Decision Intelligence</a>
     <a href="#delivery">Activate phases</a>
-    <a href="#protocols">AI protocols</a>
-    <a href="#compliance">What the client keeps</a>
     <a href="#evidence">Research</a>
   </div>
-</nav></header>
+</div></div>
 
 <main id="main">
 
@@ -383,8 +431,9 @@ details.gate .drill details:last-of-type{border-bottom:0}
   <p class="phasebar"><a href="#delivery"><b>Discover</b><span>·</span><b>Prepare</b><span>·</span><b>Explore</b><span>·</span><b>Realize</b><span>·</span><b>Deploy</b><span>·</span><b>Run</b></a></p>
   <p class="baseline-note">SAP Activate is the baseline method here. Other delivery standards — client stage gates, PMI or PRINCE2, an SI's own method — are adopted the same way: same record, same approvals, different phase names.</p>
   <div class="hero-actions">
-    <a class="btn primary" href="#delivery">See the Activate phases <span aria-hidden="true">↓</span></a>
-    <a class="btn secondary" href="#compliance">What the client keeps</a>
+    <a class="btn primary" href="Transformation_Program_Decision_Intelligence_Advisory_Executive_Brief.pdf">Download the executive brief <span aria-hidden="true">↓</span></a>
+    <a class="btn secondary" href="#executive-brief">How the engagement starts</a>
+    <a class="btn secondary" href="#delivery">See the Activate phases</a>
   </div>
   <div class="promise">
     <strong>Their tools.<br>Their rules.<br>Their record.</strong>
@@ -396,6 +445,36 @@ details.gate .drill details:last-of-type{border-bottom:0}
   </div>
 </div></section>
 
+
+<!-- EXECUTIVE BRIEF CTA + ENGAGEMENT PROCESS -->
+<section class="section tint" id="executive-brief"><div class="wrap">
+  <div class="section-head">
+    <p class="kicker">Executive brief</p>
+    <h2>It starts with a simple meeting.</h2>
+    <p class="lede">There is no procurement path to walk down first. The relationship opens with an introductory session — a working conversation, not a pitch — to understand the program in front of the board, the decisions the executive team is having to make, and where Decision Intelligence could help. Every subsequent step is commissioned on evidence, not on speculation.</p>
+  </div>
+  <div class="grid three" style="margin-top:var(--space-6)">
+    <div class="card">
+      <p class="kicker">Step one</p>
+      <h3>Introductory session</h3>
+      <p>A single meeting, typically 45–60 minutes. Video or in person. No slides, no NDA required for the conversation itself, no follow-on obligation. Produces a short written note and a candid read on whether the shape is a fit.</p>
+    </div>
+    <div class="card">
+      <p class="kicker">Step two · Option A</p>
+      <h3>Limited assessment of an existing program</h3>
+      <p>Two to six weeks. Reads the current decision surface, data governance posture and program control cadence, and returns a written assessment with concrete moves the executive team can make immediately. Fixed fee against a defined scope; no runtime, no retainer, no lock-in.</p>
+    </div>
+    <div class="card">
+      <p class="kicker">Step two · Option B</p>
+      <h3>Inclusion in an SI proposal team</h3>
+      <p>Joins a proposal team assembled by an SI, boutique consultancy or headhunter-brokered consortium — adding Decision Intelligence, sovereign data posture and program-control substance to the response without competing with the delivery scope.</p>
+    </div>
+  </div>
+  <div class="hero-actions" style="margin-top:var(--space-6);justify-content:center">
+    <a class="btn primary" href="Transformation_Program_Decision_Intelligence_Advisory_Executive_Brief.pdf">Download the executive brief (PDF) <span aria-hidden="true">↓</span></a>
+    <a class="btn secondary" href="https://www.linkedin.com/in/lilian-corvington-9888905">Request the introductory session</a>
+  </div>
+</div></section>
 
 <!-- PEDIGREE -->
 <section class="section"><div class="wrap">
@@ -480,7 +559,7 @@ details.gate .drill details:last-of-type{border-bottom:0}
     </div>
   </div>
   <div class="source-grid">
-    <article class="source"><div class="source-meta"><span>Controlled document</span><span>Advisory</span></div><h3>Review brief</h3><p>The phone-readable controlled PDF of this surface, carrying a SHA-256 content hash, key identifier and UTC timestamp on every page, with clickable links throughout.</p><a href="EVEglyphDesign_Enterprise_Program_Alignment_Review_Brief.pdf" target="_blank" rel="noopener noreferrer">Open the review brief &#8599;</a></article>
+    <article class="source"><div class="source-meta"><span>Downloadable document</span><span>Advisory</span></div><h3>Executive brief</h3><p>A six-page executive brief in Emerson Rush styling: what the advisory covers, how the engagement starts with an introductory session, and the two shapes it can take — a limited assessment of an existing program, or inclusion in an SI proposal team.</p><a href="Transformation_Program_Decision_Intelligence_Advisory_Executive_Brief.pdf" target="_blank" rel="noopener noreferrer">Download the executive brief &#8599;</a></article>
     <article class="source"><div class="source-meta"><span>Decision log</span><span>Dated entries</span></div><h3>Why the surface says what it says</h3><p>Every change to this page is recorded as a dated decision with its reasoning. Nothing is silently overwritten; earlier positions are superseded in the open.</p><a href="https://github.com/EVEglyphDesign/enterprise-program-alignment/blob/main/DECISIONS.md" target="_blank" rel="noopener noreferrer">Open the decision log &#8599;</a></article>
     <article class="source"><div class="source-meta"><span>Published standards</span><span>Four documents</span></div><h3>The standards behind the method</h3><p>Programme-context refinement, inventory before purchase, PMO assistants and the contribution and meeting standard &mdash; written out in full, not summarised into claims.</p><a href="https://github.com/EVEglyphDesign/enterprise-program-alignment" target="_blank" rel="noopener noreferrer">Open the standards &#8599;</a></article>
     <article class="source"><div class="source-meta"><span>Independent sources</span><span>Eight references</span></div><h3>The evidence room</h3><p>WIPO, US statute, NIST, CISA and NCSC guidance on trade secrets, AI data security and secure AI development. Independent sources, not sales material.</p><a href="#evidence">Go to the evidence room &#8595;</a></article>
